@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour {
         characterController.Move(new Vector3(Input.GetAxis("Horizontal"), fallingSpeed, 0) * Time.deltaTime * movementSpeed);
 
         if (characterController.isGrounded) {
-            fallingSpeed = 0;
+            fallingSpeed = Constants.GRAVITY;
         }
     }
 }
