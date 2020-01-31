@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Critical : Interactable {
+public class CriticalInteractable : Interactable {
 
     public float criticalMaxValue = 10f;
     public float criticalSpeed = 1f;
