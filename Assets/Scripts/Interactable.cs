@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour {
+    public GameObject interactionIndicator;
 
     protected List<Transform> playersInInteraction;
+
+    protected bool ShowingInteraction { get; set; }
 
     protected virtual void Awake() {
         playersInInteraction = new List<Transform>();
@@ -20,7 +23,9 @@ public class Interactable : MonoBehaviour {
         if (other.tag == "Player") {
             playersInInteraction.Add(other.transform);
 
-            ShowInteraction();
+            if (!ShowingInteraction) {
+                ShowInteraction();
+            }
         }
     }
 
@@ -39,10 +44,12 @@ public class Interactable : MonoBehaviour {
     }
 
     protected virtual void ShowInteraction() {
-
+        interactionIndicator.SetActive(true);
+        ShowingInteraction = true;
     }
 
     protected virtual void HideInteraction() {
-
+        interactionIndicator.SetActive(false);
+        ShowingInteraction = false;
     }
 }

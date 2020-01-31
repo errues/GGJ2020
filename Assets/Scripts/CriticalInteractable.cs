@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CriticalInteractable : Interactable {
-
-    public float criticalMaxValue = 10f;
-    public float criticalSpeed = 1f;
+    public float criticalSpeed = 0.1f;
 
     private float criticalState;
 
@@ -25,11 +23,11 @@ public class CriticalInteractable : Interactable {
     }
 
     public virtual void ApplyCriticalState() {
-        GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, Color.white, criticalState / criticalMaxValue);
+        GetComponentInChildren<MeshRenderer>().material.color = Color.Lerp(Color.red, Color.white, criticalState);
     }
 
     public void RestoreCriticalState() {
-        criticalState = criticalMaxValue;
+        criticalState = 1f;
     }
 
     private void CriticalFinish() {
