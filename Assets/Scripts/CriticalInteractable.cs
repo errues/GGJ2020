@@ -5,7 +5,7 @@ using UnityEngine;
 public class CriticalInteractable : Interactable {
     public float criticalSpeed = 0.1f;
 
-    private float criticalState;
+    protected float criticalState;
 
     protected override void Awake() {
         base.Awake();

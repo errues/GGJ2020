@@ -4,27 +4,11 @@ using UnityEngine;
 
 public class BunkerDoor : CriticalInteractable {
 
-    public int pushButtonTimesToFix = 6;
-
-    private int buttonTimesPushed;
+    public float pushButtonFix = 0.1f;
 
     protected override void InteractLoop() {
         if (Input.GetKeyDown(KeyCode.E)) {
-            buttonTimesPushed++;
-            if (buttonTimesPushed == pushButtonTimesToFix) {
-                buttonTimesPushed = 0;
-                RestoreCriticalState();
-            }
+            criticalState = Mathf.Clamp01(criticalState + pushButtonFix);
         }
-    }
-
-    protected override void ShowInteraction() {
-        base.ShowInteraction();
-        buttonTimesPushed = 0;
-    }
-
-    protected override void HideInteraction() {
-        base.HideInteraction();
-        buttonTimesPushed = 0;
     }
 }
