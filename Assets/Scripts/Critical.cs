@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Critical : MonoBehaviour {
+public class Critical : Interactable {
 
     public float criticalMaxValue = 10f;
     public float criticalSpeed = 1f;
 
     private float criticalState;
 
-    private void Awake() {
+    protected override void Awake() {
+        base.Awake();
         RestoreCriticalState();
     }
 
-    private void Update() {
+    protected override void Update() {
+        base.Update();
         criticalState -= Time.deltaTime * criticalSpeed;
         ApplyCriticalState();
 
