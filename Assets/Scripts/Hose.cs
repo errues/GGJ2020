@@ -8,6 +8,7 @@ public class Hose : Interactable {
 
     public float rollUpTime;
     public AnimationCurve rollUpCurve;
+    public float distanceOffset;
     
     private float distance;
     private bool hoseAtOrigin;
@@ -41,13 +42,17 @@ public class Hose : Interactable {
             }
 
             if (ownPlayerReference.HoldingHose) {
-                distance = Vector3.Distance(transform.position, ownPlayerReference.transform.position);
+                distance = Vector3.Distance(transform.position, ownPlayerReference.transform.position) - distanceOffset;
                 SetHoseSize();
             } else if (!rollingUp && !hoseAtOrigin) {
                 rollingUp = true;
                 initialTime = Time.time;
                 initialDistance = distance;
                 alpha = 0;
+
+                if (player != null) {
+                    ShowInteraction();
+                }
             }
 
             if (rollingUp) {
@@ -57,6 +62,7 @@ public class Hose : Interactable {
 
                 if (alpha >= 1) {
                     rollingUp = false;
+                    hoseAtOrigin = true;
                 }
             }
         }
@@ -64,7 +70,7 @@ public class Hose : Interactable {
 
     private void SetHoseSize() {
         hose.localScale = new Vector3(distance / 1.015535f, hose.localScale.y, hose.localScale.z);
-        tap.localPosition = new Vector3(distance, tap.position.y, tap.position.z);
+        tap.localPosition = new Vector3(distance, tap.localPosition.y, tap.localPosition.z);
     }
 
     protected override void OnTriggerEnter(Collider other) {

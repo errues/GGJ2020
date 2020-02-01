@@ -36,6 +36,7 @@ public class Ladder : Interactable {
     private void EngageLadder(bool up) {
         player.GoBack();
         player.InLadder = true;
+        player.AutoRotate(true);
         Vector3 pos = player.transform.position;
         pos.x = transform.position.x;
         pos.y += verticalDisplacementOnEngage * (up ? 1 : -1);
