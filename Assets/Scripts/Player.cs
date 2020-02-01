@@ -74,7 +74,7 @@ public class Player : MonoBehaviour {
             if (InLadder) {
                 characterController.Move(new Vector3(0, Input.GetAxisRaw("Vertical"), 0) * Time.deltaTime * inLadderMovementSpeed);
                 animator.speed = Input.GetAxisRaw("Vertical") != 0 ? 1 : 0;
-            } else {
+            } else if (NotHammering()) {
                 fallingSpeed += Constants.GRAVITY;
                 characterController.Move(new Vector3(Input.GetAxisRaw("Horizontal"), fallingSpeed, 0) * Time.deltaTime * (HoldingHose ? holdingHoseMovementSpeed : movementSpeed));
 
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour {
             if (autoRotationAlpha == 1) {
                 autoRotating = false;
             }
-        } else if (!AutoMoving) {
+        } else if (!AutoMoving && !InLadder && NotHammering()) {
             if (Input.GetAxis("Horizontal") > 0) {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             } else if (Input.GetAxis("Horizontal") < 0) {
@@ -183,5 +183,29 @@ public class Player : MonoBehaviour {
         targetRotation = Quaternion.Euler(0, 90 * (front ? -1 : 1), 0);
         initialRotation = transform.rotation;
         autoRotationAlpha = 0;
+    }
+
+    public void StartHammering() {
+        animator.SetTrigger("hammer");
+    }
+
+    public void StopHammering() {
+        animator.SetTrigger("putDownHammer");
+    }
+
+    private bool NotHammering() {
+        if (animator.IsInTransition(0)) {
+            return !animator.GetNextAnimatorStateInfo(0).IsName("GrabHammer") &&
+            !animator.GetNextAnimatorStateInfo(0).IsName("Hammer") &&
+            !animator.GetNextAnimatorStateInfo(0).IsName("PutDownHammer");
+        }
+
+        return !animator.GetCurrentAnimatorStateInfo(0).IsName("GrabHammer") && 
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Hammer") && 
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("PutDownHammer");
+    }
+
+    public void Hammer() {
+        animator.SetTrigger("hammer");
     }
 }
