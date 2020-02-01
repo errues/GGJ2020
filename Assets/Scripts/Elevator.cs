@@ -62,19 +62,19 @@ public class Elevator : Interactable {
     protected override void InteractLoop() {
         if (Input.GetButtonDown("Use") && !player.AutoMoving && !player.HoldingHose) {
             if (player.OnFirstFloor) {
-                player.AddAutoMovement(downFrontPosition, positioningTime);
-                player.AddAutoMovement(downBackPosition, enteringTime);
-                player.AddAutoMovement(downBackPosition, positioningTime);
-                player.AddAutoMovement(topBackPosition, travelingTime);
-                player.AddAutoMovement(topFrontPosition, enteringTime);
-                player.AddAutoMovement(topFrontPosition, positioningTime);
+                player.AddAutoMovement(downFrontPosition, positioningTime, false, 1);
+                player.AddAutoMovement(downBackPosition, enteringTime, false, 0);
+                player.AddAutoMovement(downBackPosition, positioningTime, true, 2);
+                player.AddAutoMovement(topBackPosition, travelingTime, true, 0);
+                player.AddAutoMovement(topFrontPosition, enteringTime, false, 0);
+                player.AddAutoMovement(topFrontPosition, positioningTime, true, 0);
             } else {
-                player.AddAutoMovement(topFrontPosition, positioningTime);
-                player.AddAutoMovement(topBackPosition, enteringTime);
-                player.AddAutoMovement(topBackPosition, positioningTime);
-                player.AddAutoMovement(downBackPosition, travelingTime);
-                player.AddAutoMovement(downFrontPosition, enteringTime);
-                player.AddAutoMovement(downFrontPosition, positioningTime);
+                player.AddAutoMovement(topFrontPosition, positioningTime, false, 1);
+                player.AddAutoMovement(topBackPosition, enteringTime, false, 0);
+                player.AddAutoMovement(topBackPosition, positioningTime, true, 2);
+                player.AddAutoMovement(downBackPosition, travelingTime, true, 0);
+                player.AddAutoMovement(downFrontPosition, enteringTime, false, 0);
+                player.AddAutoMovement(downFrontPosition, positioningTime, true, 0);
             }
 
             StartCoroutine(DoorsSequence(player.OnFirstFloor));

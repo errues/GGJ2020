@@ -6,15 +6,21 @@ public class Player : MonoBehaviour {
     private class AutoMovement {
         public Vector3 targetPosition;
         public float time;
+        public bool wait;
+        public int rotate; // 0 = No rotation, 1 = Front, 2 = Back
 
-        public AutoMovement(Vector3 p, float t) {
+        public AutoMovement(Vector3 p, float t, bool w, int r) {
             targetPosition = p;
             time = t;
+            wait = w;
+            rotate = r;
         }
     }
 
     public float movementSpeed;
+    public float rotationSpeed;
     public float inLadderMovementSpeed;
+    public float holdingHoseMovementSpeed;
 
     public float frontZPos = 0;
     public float backZPos = 1;
@@ -22,9 +28,15 @@ public class Player : MonoBehaviour {
     private Queue<AutoMovement> autoMovements;
     private Vector3 initialPosition;
     private Vector3 targetPosition;
-    private float initialTime;
-    private float targetTime;
-    private float autoMoveAlpha;
+    private float initialAutoMovementTime;
+    private float targetAutoMovementTime;
+    private float autoMovementAlpha;
+    private bool waitingWhileAutoMovement;
+
+    private bool autoRotating;
+    private Quaternion targetRotation;
+    private Quaternion initialRotation;
+    private float autoRotationAlpha;
 
     public bool OnFirstFloor { get; set; }
     public bool InLadder { get; set; }
@@ -45,10 +57,10 @@ public class Player : MonoBehaviour {
 
     private void Update() {
         if (AutoMoving) {
-            autoMoveAlpha = Mathf.Clamp((Time.time - initialTime) / targetTime, 0, 1);
-            transform.position = Vector3.Lerp(initialPosition, targetPosition, AnimationCurve.EaseInOut(0, 0, 1, 1).Evaluate(autoMoveAlpha));
+            autoMovementAlpha = Mathf.Clamp((Time.time - initialAutoMovementTime) / targetAutoMovementTime, 0, 1);
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, AnimationCurve.EaseInOut(0, 0, 1, 1).Evaluate(autoMovementAlpha));
 
-            if (autoMoveAlpha == 1) {                
+            if (autoMovementAlpha == 1) {                
                 if (autoMovements.Count > 0) {
                     NextAutoMovement();
                 } else {
@@ -59,13 +71,30 @@ public class Player : MonoBehaviour {
         } else {
             if (InLadder) {
                 characterController.Move(new Vector3(0, Input.GetAxisRaw("Vertical"), 0) * Time.deltaTime * inLadderMovementSpeed);
+                transform.rotation = Quaternion.Euler(0, -90, 0);
             } else {
                 fallingSpeed += Constants.GRAVITY;
-                characterController.Move(new Vector3(Input.GetAxis("Horizontal"), fallingSpeed, 0) * Time.deltaTime * movementSpeed);
+                characterController.Move(new Vector3(Input.GetAxis("Horizontal"), fallingSpeed, 0) * Time.deltaTime * (HoldingHose ? holdingHoseMovementSpeed : movementSpeed));
         
                 if (characterController.isGrounded) {
                     fallingSpeed = Constants.GRAVITY;
                 }
+            }
+        }
+
+        if (autoRotating) {
+            autoRotationAlpha = Mathf.Clamp(autoRotationAlpha + Time.deltaTime * rotationSpeed, 0, 1);
+
+            transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, autoRotationAlpha);
+
+            if (autoRotationAlpha == 1) {
+                autoRotating = false;
+            }
+        } else if (!AutoMoving) {
+            if (Input.GetAxis("Horizontal") > 0) {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            } else if (Input.GetAxis("Horizontal") < 0) {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
         }
     }
@@ -108,8 +137,8 @@ public class Player : MonoBehaviour {
         characterController.enabled = true;
     }
 
-    public void AddAutoMovement(Vector3 targetPosition, float time) {
-        autoMovements.Enqueue(new AutoMovement(targetPosition, time));
+    public void AddAutoMovement(Vector3 targetPosition, float time, bool wait, int rotate) {
+        autoMovements.Enqueue(new AutoMovement(targetPosition, time, wait, rotate));
     }
 
     public void StartAutomovement() {
@@ -123,10 +152,21 @@ public class Player : MonoBehaviour {
         AutoMovement am = autoMovements.Dequeue();
         initialPosition = transform.position;
         targetPosition = am.targetPosition;
-        initialTime = Time.time;
-        targetTime = am.time;
+        initialAutoMovementTime = Time.time;
+        targetAutoMovementTime = am.time;
+        waitingWhileAutoMovement = am.wait;
+        if (am.rotate != 0) {
+            AutoRotate(am.rotate == 1);
+        }
 
-        autoMoveAlpha = 0;
+        autoMovementAlpha = 0;
         AutoMoving = true;
+    }
+
+    public void AutoRotate(bool front) {
+        autoRotating = true;
+        targetRotation = Quaternion.Euler(0, 90 * (front ? -1 : 1), 0);
+        initialRotation = transform.rotation;
+        autoRotationAlpha = 0;
     }
 }
