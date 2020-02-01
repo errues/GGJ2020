@@ -6,8 +6,6 @@ public class Hose : Interactable {
     public Transform hose;
     public Transform tap;
 
-    public Elevator elevator;
-
     public float rollUpTime;
     public AnimationCurve rollUpCurve;
     
@@ -40,9 +38,6 @@ public class Hose : Interactable {
         if (ownPlayerReference != null) {
             if (ownPlayerReference.HoldingHose && Input.GetAxisRaw("Use") == 0) {
                 ownPlayerReference.HoldingHose = false;
-                if (elevator.PlayerInInteraction()) {
-                    elevator.ForceShowInteraction();
-                }
             }
 
             if (ownPlayerReference.HoldingHose) {

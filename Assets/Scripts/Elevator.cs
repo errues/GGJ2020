@@ -59,18 +59,8 @@ public class Elevator : Interactable {
         }
     }
 
-    protected override void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
-            player = other.GetComponent<Player>();
-
-            if (!ShowingInteraction && !player.HoldingHose) {
-                ShowInteraction();
-            }
-        }
-    }
-
     protected override void InteractLoop() {
-        if (Input.GetAxisRaw("Use") != 0 && !player.AutoMoving && !player.HoldingHose) {
+        if (Input.GetButtonDown("Use") && !player.AutoMoving && !player.HoldingHose) {
             if (player.OnFirstFloor) {
                 player.AddAutoMovement(downFrontPosition, positioningTime);
                 player.AddAutoMovement(downBackPosition, enteringTime);
@@ -170,13 +160,5 @@ public class Elevator : Interactable {
         } else {
             CloseDownDoors();
         }
-    }
-
-    public bool PlayerInInteraction() {
-        return player != null;
-    }
-
-    public void ForceShowInteraction() {
-        ShowInteraction();
     }
 }
