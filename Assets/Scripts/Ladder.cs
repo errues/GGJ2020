@@ -5,7 +5,8 @@ using UnityEngine;
 public class Ladder : Interactable {
     public float offsetInExtremes;
     public float inputThreshold;
-    public float displacementOnEngage;
+    public float verticalDisplacementOnEngage;
+    public float horizontalDisplacementOnDisengage;
 
     protected override void InteractLoop() {
         if (player.InLadder) {
@@ -28,6 +29,7 @@ public class Ladder : Interactable {
     private void DisengageLadder() {
         player.InLadder = false;
         player.GoFront();
+        player.Translate(new Vector3(-horizontalDisplacementOnDisengage, 0, 0));
     }
 
     private void EngageLadder(bool up) {
@@ -35,7 +37,7 @@ public class Ladder : Interactable {
         player.InLadder = true;
         Vector3 pos = player.transform.position;
         pos.x = transform.position.x;
-        pos.y += displacementOnEngage * (up ? 1 : -1);
+        pos.y += verticalDisplacementOnEngage * (up ? 1 : -1);
         player.SetPosition(pos);
     }
 }
