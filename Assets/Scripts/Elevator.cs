@@ -30,11 +30,15 @@ public class Elevator : Interactable {
     private float alpha;
     private float initialTime;
 
+    private AudioSource audioSource;
+
     private void Awake() {
         downFrontPosition = transform.position;
         downBackPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + backDistance);
         topFrontPosition = new Vector3(transform.position.x, Bunker.instance.secondLevelHeight, transform.position.z);
         topBackPosition = new Vector3(transform.position.x, Bunker.instance.secondLevelHeight, transform.position.z + backDistance);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Update() {
@@ -131,6 +135,7 @@ public class Elevator : Interactable {
     }
 
     private IEnumerator DoorsSequence(bool goingUp) {
+        audioSource.Play();
         if (goingUp) {
             OpenDownDoors();
         } else {
@@ -147,6 +152,7 @@ public class Elevator : Interactable {
 
         yield return new WaitForSeconds(positioningTime + travelingTime);
 
+        audioSource.Play();
         if (goingUp) {
             OpenTopDoors();
         } else {
