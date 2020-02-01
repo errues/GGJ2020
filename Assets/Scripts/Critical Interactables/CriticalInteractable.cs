@@ -21,7 +21,7 @@ public class CriticalInteractable : Interactable {
     protected float criticalState;
     protected RepairState repairState;
 
-    protected void Awake() {
+    protected virtual void Awake() {
         RestoreCriticalState();
     }
 
