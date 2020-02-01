@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 8
   inLadderMovementSpeed: 5
+  holdingHoseMovementSpeed: 4
   frontZPos: 0
   backZPos: 1
 --- !u!143 &1996508321
