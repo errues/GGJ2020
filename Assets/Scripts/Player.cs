@@ -29,7 +29,8 @@ public class Player : MonoBehaviour {
     public bool OnFirstFloor { get; set; }
     public bool InLadder { get; set; }
     public bool AutoMoving { get; set; }
-    
+    public bool HoldingHose { get; set; }
+
     private CharacterController characterController;
 
     private float fallingSpeed;
