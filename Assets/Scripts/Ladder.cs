@@ -30,6 +30,7 @@ public class Ladder : Interactable {
         player.InLadder = false;
         player.GoFront();
         player.Translate(new Vector3(-horizontalDisplacementOnDisengage, 0, 0));
+        player.DisengageLadder();
     }
 
     private void EngageLadder(bool up) {
@@ -39,5 +40,6 @@ public class Ladder : Interactable {
         pos.x = transform.position.x;
         pos.y += verticalDisplacementOnEngage * (up ? 1 : -1);
         player.SetPosition(pos);
+        player.EngageLadder();
     }
 }

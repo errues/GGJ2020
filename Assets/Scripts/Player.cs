@@ -31,7 +31,6 @@ public class Player : MonoBehaviour {
     private float initialAutoMovementTime;
     private float targetAutoMovementTime;
     private float autoMovementAlpha;
-    private bool waitingWhileAutoMovement;
 
     private bool autoRotating;
     private Quaternion targetRotation;
@@ -44,11 +43,14 @@ public class Player : MonoBehaviour {
     public bool HoldingHose { get; set; }
 
     private CharacterController characterController;
+    private Animator animator;
 
     private float fallingSpeed;
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
+
         OnFirstFloor = transform.position.y < Bunker.instance.secondLevelHeight - 1;
         InLadder = false;
 
@@ -71,10 +73,12 @@ public class Player : MonoBehaviour {
         } else {
             if (InLadder) {
                 characterController.Move(new Vector3(0, Input.GetAxisRaw("Vertical"), 0) * Time.deltaTime * inLadderMovementSpeed);
-                transform.rotation = Quaternion.Euler(0, -90, 0);
+                animator.speed = Input.GetAxisRaw("Vertical") != 0 ? 1 : 0;
             } else {
                 fallingSpeed += Constants.GRAVITY;
-                characterController.Move(new Vector3(Input.GetAxis("Horizontal"), fallingSpeed, 0) * Time.deltaTime * (HoldingHose ? holdingHoseMovementSpeed : movementSpeed));
+                characterController.Move(new Vector3(Input.GetAxisRaw("Horizontal"), fallingSpeed, 0) * Time.deltaTime * (HoldingHose ? holdingHoseMovementSpeed : movementSpeed));
+
+                animator.SetBool("running", Input.GetAxisRaw("Horizontal") != 0);
         
                 if (characterController.isGrounded) {
                     fallingSpeed = Constants.GRAVITY;
@@ -148,13 +152,24 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void EngageLadder() {
+        transform.rotation = Quaternion.Euler(0, 90, 0);
+        animator.SetBool("climbing", true);
+    }
+
+    public void DisengageLadder() {
+        animator.SetBool("climbing", false);
+    }
+
     public void NextAutoMovement() {
         AutoMovement am = autoMovements.Dequeue();
         initialPosition = transform.position;
         targetPosition = am.targetPosition;
         initialAutoMovementTime = Time.time;
         targetAutoMovementTime = am.time;
-        waitingWhileAutoMovement = am.wait;
+
+        animator.SetBool("running", !am.wait);
+
         if (am.rotate != 0) {
             AutoRotate(am.rotate == 1);
         }
