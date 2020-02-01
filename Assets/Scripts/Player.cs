@@ -62,7 +62,7 @@ public class Player : MonoBehaviour {
             autoMovementAlpha = Mathf.Clamp((Time.time - initialAutoMovementTime) / targetAutoMovementTime, 0, 1);
             transform.position = Vector3.Lerp(initialPosition, targetPosition, AnimationCurve.EaseInOut(0, 0, 1, 1).Evaluate(autoMovementAlpha));
 
-            if (autoMovementAlpha == 1) {                
+            if (autoMovementAlpha == 1) {
                 if (autoMovements.Count > 0) {
                     NextAutoMovement();
                 } else {
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour {
                 characterController.Move(new Vector3(Input.GetAxisRaw("Horizontal"), fallingSpeed, 0) * Time.deltaTime * (HoldingHose ? holdingHoseMovementSpeed : movementSpeed));
 
                 animator.SetBool("running", Input.GetAxisRaw("Horizontal") != 0);
-        
+
                 if (characterController.isGrounded) {
                     fallingSpeed = Constants.GRAVITY;
                 }
@@ -200,8 +200,8 @@ public class Player : MonoBehaviour {
             !animator.GetNextAnimatorStateInfo(0).IsName("PutDownHammer");
         }
 
-        return !animator.GetCurrentAnimatorStateInfo(0).IsName("GrabHammer") && 
-            !animator.GetCurrentAnimatorStateInfo(0).IsName("Hammer") && 
+        return !animator.GetCurrentAnimatorStateInfo(0).IsName("GrabHammer") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Hammer") &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName("PutDownHammer");
     }
 
