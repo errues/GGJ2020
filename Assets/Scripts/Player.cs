@@ -95,7 +95,7 @@ public class Player : MonoBehaviour {
                 autoRotating = false;
             }
         } else if (!AutoMoving && !InLadder && NotHammering()) {
-            if (Input.GetAxis("Horizontal") > 0) {
+            if (Input.GetAxis("Horizontal") > 0 || HoldingHose) {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             } else if (Input.GetAxis("Horizontal") < 0) {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -207,5 +207,9 @@ public class Player : MonoBehaviour {
 
     public void Hammer() {
         animator.SetTrigger("hammer");
+    }
+
+    public void HosePose(bool grabbing) {
+        animator.SetBool("grabbingHose", grabbing);
     }
 }

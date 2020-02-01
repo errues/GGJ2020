@@ -48,7 +48,7 @@ MonoBehaviour:
   movementSpeed: 7
   rotationSpeed: 4
   inLadderMovementSpeed: 2
-  holdingHoseMovementSpeed: 4
+  holdingHoseMovementSpeed: 3
   frontZPos: 0
   backZPos: 1.5
 --- !u!143 &1996508321

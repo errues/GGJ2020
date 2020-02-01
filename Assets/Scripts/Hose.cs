@@ -25,10 +25,13 @@ public class Hose : Interactable {
 
     protected override void InteractLoop() {
         player.HoldingHose = Input.GetAxisRaw("Use") != 0;
+
         if (player.HoldingHose) {
+            // Coge la manguera
             rollingUp = false;
             hoseAtOrigin = false;
             HideInteraction();
+            ownPlayerReference.HosePose(true);
         }
     }
 
@@ -45,14 +48,16 @@ public class Hose : Interactable {
                 distance = Vector3.Distance(transform.position, ownPlayerReference.transform.position) - distanceOffset;
                 SetHoseSize();
             } else if (!rollingUp && !hoseAtOrigin) {
-                rollingUp = true;
-                initialTime = Time.time;
-                initialDistance = distance;
-                alpha = 0;
+                // Suelta la manguera
+                ownPlayerReference.HosePose(false);
 
                 if (player != null) {
                     ShowInteraction();
                 }
+                rollingUp = true;
+                initialTime = Time.time;
+                initialDistance = distance;
+                alpha = 0;
             }
 
             if (rollingUp) {
