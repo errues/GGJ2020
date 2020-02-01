@@ -5,23 +5,19 @@ using UnityEngine;
 public class Interactable : MonoBehaviour {
     public GameObject interactionIndicator;
 
-    protected List<Transform> playersInInteraction;
+    protected Player player;
 
     protected bool ShowingInteraction { get; set; }
 
-    protected virtual void Awake() {
-        playersInInteraction = new List<Transform>();
-    }
-
     protected virtual void Update() {
-        if (playersInInteraction.Count > 0) {
+        if (player != null) {
             InteractLoop();
         }
     }
 
     protected virtual void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            playersInInteraction.Add(other.transform);
+            player = other.GetComponent<Player>();
 
             if (!ShowingInteraction) {
                 ShowInteraction();
@@ -31,11 +27,8 @@ public class Interactable : MonoBehaviour {
 
     protected virtual void OnTriggerExit(Collider other) {
         if (other.tag == "Player") {
-            playersInInteraction.Remove(other.transform);
-
-            if (playersInInteraction.Count == 0) {
-                HideInteraction();
-            }
+            player = null;
+            HideInteraction();
         }
     }
 

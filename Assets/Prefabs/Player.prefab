@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2436203177341829074}
   - component: {fileID: 4878565607744715858}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 8
+  inLadderMovementSpeed: 5
+  frontZPos: 0
+  backZPos: 1
 --- !u!143 &1996508321
 CharacterController:
   m_ObjectHideFlags: 0

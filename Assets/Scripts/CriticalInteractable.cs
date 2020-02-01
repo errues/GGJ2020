@@ -7,8 +7,7 @@ public class CriticalInteractable : Interactable {
 
     protected float criticalState;
 
-    protected override void Awake() {
-        base.Awake();
+    protected void Awake() {
         RestoreCriticalState();
     }
 
