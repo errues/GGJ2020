@@ -37,12 +37,16 @@ public class Interactable : MonoBehaviour {
     }
 
     protected virtual void ShowInteraction() {
-        interactionIndicator.SetActive(true);
+        if (interactionIndicator != null) {
+            interactionIndicator.SetActive(true);
+        }
         ShowingInteraction = true;
     }
 
     protected virtual void HideInteraction() {
-        interactionIndicator.SetActive(false);
+        if (interactionIndicator != null) {
+            interactionIndicator.SetActive(false);
+        }
         ShowingInteraction = false;
     }
 }
