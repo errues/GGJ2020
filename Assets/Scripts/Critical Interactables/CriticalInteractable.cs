@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CriticalInteractable : Interactable {
+    [System.Serializable]
+    public class CriticalSpeed {
+        public float time = 60;
+        public Vector2 criticalSpeed = new Vector2(0.01f, 0.02f);
+    }
+
     public enum RepairState{
         GOOD,
         NEEDREPAIR,
         CRITICAL
     }
 
-    [Range(0, 1)]
-    public float criticalSpeed = 0.1f;
+    public float timeToStart = 0f;
+
+    public CriticalSpeed[] criticalSpeeds = new CriticalSpeed[3];
 
     [Header("Repair States")]
     [Range(0, 1)]
@@ -21,29 +28,79 @@ public class CriticalInteractable : Interactable {
     protected float criticalState;
     protected RepairState repairState;
 
+    private float currentCriticalSpeed;
+    private int currentCriticalSpeedIndex;
+
+    private float initialTime;
+
+    public bool Enabled { get; private set; }
+
     protected virtual void Awake() {
         RestoreCriticalState();
+        ChangeCriticalSpeed();
+        currentCriticalSpeedIndex = 0;
+    }
+
+    private IEnumerator Start() {
+        initialTime = Time.time;
+        yield return new WaitForSeconds(timeToStart);
+        Enabled = true;
     }
 
     protected override void Update() {
         base.Update();
-        criticalState -= Time.deltaTime * criticalSpeed;
-        ApplyCriticalState();
+        if (Enabled) {
+            criticalState -= Time.deltaTime * currentCriticalSpeed;
+            SetCriticalState();
 
-        if (criticalState <= 0) {
-            CriticalFinish();
+            if (criticalState <= 0) {
+                CriticalFinish();
+            }
         }
     }
 
-    public virtual void ApplyCriticalState() {
-        if (criticalState < criticalRepairState) {
+    protected void ChangeCriticalSpeed() {
+        Vector2 speed;
+        if (currentCriticalSpeedIndex == criticalSpeeds.Length - 1) {
+            speed = new Vector2(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y);
+        } else {
+            speed = new Vector2(
+                Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex + 1].criticalSpeed.x, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time),
+                Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y, criticalSpeeds[currentCriticalSpeedIndex + 1].criticalSpeed.y, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time)
+                );
+
+            if (Time.time - initialTime > criticalSpeeds[currentCriticalSpeedIndex].time) {
+                currentCriticalSpeedIndex++;
+            }
+        }
+
+
+        currentCriticalSpeed = Random.Range(speed.x, speed.y);
+    }
+
+    private void SetCriticalState() {
+        RepairState lastRepairState = repairState;
+
+        if (criticalState < criticalRepairState && repairState != RepairState.CRITICAL) {
             repairState = RepairState.CRITICAL;
-            GetComponentInChildren<Renderer>().material.color = Color.red;
-        } else if (criticalState < noNeedRepairState) {
+        } else if (criticalState < noNeedRepairState && criticalState  >= criticalRepairState && repairState != RepairState.NEEDREPAIR) {
             repairState = RepairState.NEEDREPAIR;
+        } else if (criticalState >= noNeedRepairState && repairState != RepairState.GOOD) {
+            repairState = RepairState.GOOD;
+        }
+
+        if (lastRepairState != repairState) {
+            ApplyCriticalState();
+            ChangeCriticalSpeed();
+        }
+    }
+
+    protected virtual void ApplyCriticalState() {
+        if (repairState == RepairState.CRITICAL) {
+            GetComponentInChildren<Renderer>().material.color = Color.red;
+        } else if (repairState == RepairState.NEEDREPAIR) {
             GetComponentInChildren<Renderer>().material.color = Color.blue;
         } else {
-            repairState = RepairState.GOOD;
             GetComponentInChildren<Renderer>().material.color = Color.green;
         }
     }
@@ -51,6 +108,8 @@ public class CriticalInteractable : Interactable {
     public void RestoreCriticalState() {
         criticalState = 1f;
         repairState = RepairState.GOOD;
+        ApplyCriticalState();
+        ChangeCriticalSpeed();
     }
 
     private void CriticalFinish() {
