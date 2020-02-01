@@ -33,8 +33,8 @@ public class Elevator : Interactable {
     private void Awake() {
         downFrontPosition = transform.position;
         downBackPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + backDistance);
-        topFrontPosition = new Vector3(transform.position.x, Bunker.instance.secondLevelHeight - Bunker.instance.firstLevelHeight, transform.position.z);
-        topBackPosition = new Vector3(transform.position.x, Bunker.instance.secondLevelHeight - Bunker.instance.firstLevelHeight, transform.position.z + backDistance);
+        topFrontPosition = new Vector3(transform.position.x, transform.position.y + Bunker.instance.secondLevelHeight - Bunker.instance.firstLevelHeight, transform.position.z);
+        topBackPosition = new Vector3(transform.position.x, transform.position.y + Bunker.instance.secondLevelHeight - Bunker.instance.firstLevelHeight, transform.position.z + backDistance);
     }
 
     protected override void Update() {
