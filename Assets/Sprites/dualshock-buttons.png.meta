@@ -1,0 +1,1155 @@
+fileFormatVersion: 2
+guid: 39c7732ec96cd644e9dbfa46b3bfc0f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8558251910331614119
+    second: dualshock-buttons_0
+  - first:
+      213: 3727172463408476225
+    second: dualshock-buttons_1
+  - first:
+      213: 1439328520728806497
+    second: dualshock-buttons_2
+  - first:
+      213: -8897466065134320631
+    second: dualshock-buttons_3
+  - first:
+      213: -5092258226135443341
+    second: dualshock-buttons_4
+  - first:
+      213: -7809844812114588156
+    second: dualshock-buttons_5
+  - first:
+      213: 3138032848139503057
+    second: dualshock-buttons_6
+  - first:
+      213: 100447475195875063
+    second: dualshock-buttons_7
+  - first:
+      213: 5386497097214057564
+    second: dualshock-buttons_8
+  - first:
+      213: -5514068154099019087
+    second: dualshock-buttons_9
+  - first:
+      213: -4019594054705218679
+    second: dualshock-buttons_10
+  - first:
+      213: 3251339419791497437
+    second: dualshock-buttons_11
+  - first:
+      213: -6503834580277733399
+    second: dualshock-buttons_12
+  - first:
+      213: -719787951426664404
+    second: dualshock-buttons_13
+  - first:
+      213: 5680610974001589705
+    second: dualshock-buttons_14
+  - first:
+      213: 8038865484775393085
+    second: dualshock-buttons_15
+  - first:
+      213: -8379298844951474252
+    second: dualshock-buttons_16
+  - first:
+      213: -1264716149607011627
+    second: dualshock-buttons_17
+  - first:
+      213: -5582843091061465630
+    second: dualshock-buttons_18
+  - first:
+      213: -3978802675987365678
+    second: dualshock-buttons_19
+  - first:
+      213: -8812781990184499073
+    second: dualshock-buttons_20
+  - first:
+      213: -3237401614604352967
+    second: dualshock-buttons_21
+  - first:
+      213: 5519925849523240165
+    second: dualshock-buttons_22
+  - first:
+      213: -6049946284345633260
+    second: dualshock-buttons_23
+  - first:
+      213: -6262210576026484658
+    second: dualshock-buttons_24
+  - first:
+      213: 2699176302752756474
+    second: dualshock-buttons_25
+  - first:
+      213: -2189993779911647042
+    second: dualshock-buttons_26
+  - first:
+      213: -6500528430228694283
+    second: dualshock-buttons_27
+  - first:
+      213: 7779248321478478709
+    second: dualshock-buttons_28
+  - first:
+      213: 7140362777225902997
+    second: dualshock-buttons_29
+  - first:
+      213: -1213131138641612503
+    second: dualshock-buttons_30
+  - first:
+      213: 1179050535749677523
+    second: dualshock-buttons_31
+  - first:
+      213: -6565978388949637750
+    second: dualshock-buttons_32
+  - first:
+      213: 1219362251132770912
+    second: dualshock-buttons_33
+  - first:
+      213: -7171400823390699727
+    second: dualshock-buttons_34
+  - first:
+      213: 5848633221646217051
+    second: dualshock-buttons_35
+  - first:
+      213: 6155253359522305066
+    second: dualshock-buttons_36
+  - first:
+      213: 2041882047184479665
+    second: dualshock-buttons_37
+  - first:
+      213: -7125841233109412732
+    second: dualshock-buttons_38
+  - first:
+      213: 6832868242215526426
+    second: dualshock-buttons_39
+  - first:
+      213: -4188699625449644063
+    second: dualshock-buttons_40
+  - first:
+      213: 5224573435118565304
+    second: dualshock-buttons_41
+  - first:
+      213: 1752085242415501192
+    second: dualshock-buttons_42
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dualshock-buttons_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 463
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be2d2c78fcb9b94fb24df6e0f9c1444
+      internalID: -8558251910331614119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 461
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787b5922568b64b4fbeb40632ed24dec
+      internalID: 3727172463408476225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 386
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98fd9c8373d53a4c91bea940f7cba13
+      internalID: 1439328520728806497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ebc4b801b2ef944994cb325338b419
+      internalID: -8897466065134320631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc573bd1db569094f85018801aca6d66
+      internalID: -5092258226135443341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4136aa24f1e99e349a6b564a24371c7a
+      internalID: -7809844812114588156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 323
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967fcf7df428ecf498b91b1b627f28e7
+      internalID: 3138032848139503057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 323
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33232db333d3e09498e465127d79ffab
+      internalID: 100447475195875063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 329
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca499b7a486d1544e8afe8df79abcf86
+      internalID: 5386497097214057564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 329
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f2e75d8aac4fa4b9b9c624c728fda1
+      internalID: -5514068154099019087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 256
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d64b7c1ff7bef24d98adf633f7e576b
+      internalID: -4019594054705218679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99262198589f3834f82e94ef210c905a
+      internalID: 3251339419791497437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a05fc0d4d175f48981f04048e0453b
+      internalID: -6503834580277733399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21c6c16320c1fc428c210319a201c9f
+      internalID: -719787951426664404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_14
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 256
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef359225ef8857f4f99c5e90c90b723e
+      internalID: 5680610974001589705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f98d0d83fa385743a66e9625f37a567
+      internalID: 8038865484775393085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_16
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff7d3da79fe94d43a871d80c097ad65
+      internalID: -8379298844951474252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae2312361997914ea213a1179dc7bc2
+      internalID: -1264716149607011627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_18
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4e94fcae6d0de4295634946201a8f9
+      internalID: -5582843091061465630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb48e010692dba4fb2eec34c347fd98
+      internalID: -3978802675987365678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 193
+        width: 124
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987f9a7c3ac57b0408ee745280ba7efc
+      internalID: -8812781990184499073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a90c9569c00b6d448c85cf28bb948e9
+      internalID: -3237401614604352967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8980853d8c88349a0dd21fd4119a8d
+      internalID: 5519925849523240165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e861bb65c5ca0409e3447fa8b3d9a4
+      internalID: -6049946284345633260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 129
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643c57872cdb9164e8dc6883c65c1e37
+      internalID: -6262210576026484658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_25
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73bfdeb8b1e971140a24f3d1cc8c7460
+      internalID: 2699176302752756474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6531f085440fc6244b45ae703e16153f
+      internalID: -2189993779911647042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_27
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e412ae15226fc9e4f968af123a85e05e
+      internalID: -6500528430228694283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_28
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 126
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abff43de84f78c14e9098cd011c9dc9e
+      internalID: 7779248321478478709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f776779e192e5847b1cfb4b7abc42a1
+      internalID: 7140362777225902997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_30
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdd58565e4c54e42abbb40d09f24379
+      internalID: -1213131138641612503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82e3f17efe30504d95cc94b41694fb2
+      internalID: 1179050535749677523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_32
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 65
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022dc322c0c919c46acfdc248776bbd4
+      internalID: -6565978388949637750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_33
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 65
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424646f0a8884f34199379d4824dc4e9
+      internalID: 1219362251132770912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 72
+        width: 94
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8186cab5781905642a6203f3e6b791dc
+      internalID: -7171400823390699727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 68
+        width: 88
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6152b73ee663d145a72fa775f6bf5e3
+      internalID: 5848633221646217051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d6b3051ed1129429ee665b8741a88b
+      internalID: 6155253359522305066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_37
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d0fa5addc821a4db423d70c175c300
+      internalID: 2041882047184479665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_38
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 14
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241f2b8b4ed84354a81375e6ae3f54f1
+      internalID: -7125841233109412732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_39
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 14
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a09073fd140e5840a2933830c1b0793
+      internalID: 6832868242215526426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_40
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 4
+        width: 79
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7657d4f985ef6434f872ca7b1e6f0d9f
+      internalID: -4188699625449644063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_41
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 4
+        width: 85
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b31ce3dd85e24645a6c9464f9096202
+      internalID: 5224573435118565304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dualshock-buttons_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c2a3d760eb5d64abec1d380b7b052e
+      internalID: 1752085242415501192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f28925c9a8e31b64c86d67974512a623
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
