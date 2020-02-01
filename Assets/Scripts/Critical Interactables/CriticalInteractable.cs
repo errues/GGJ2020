@@ -38,13 +38,14 @@ public class CriticalInteractable : Interactable {
     public virtual void ApplyCriticalState() {
         if (criticalState < criticalRepairState) {
             repairState = RepairState.CRITICAL;
+            GetComponentInChildren<Renderer>().material.color = Color.red;
         } else if (criticalState < noNeedRepairState) {
             repairState = RepairState.NEEDREPAIR;
+            GetComponentInChildren<Renderer>().material.color = Color.blue;
         } else {
             repairState = RepairState.GOOD;
+            GetComponentInChildren<Renderer>().material.color = Color.green;
         }
-
-        GetComponentInChildren<Renderer>().material.color = Color.Lerp(Color.red, Color.white, criticalState);
     }
 
     public void RestoreCriticalState() {
