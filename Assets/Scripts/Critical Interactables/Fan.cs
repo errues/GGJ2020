@@ -21,6 +21,9 @@ public class Fan : CriticalInteractable {
     [Header("Sounds")]
     public AudioSource normalAudioSource;
     public AudioSource criticalAudioSource;
+    public AudioSource minigameAudioSource;
+    public AudioClip succesClip;
+    public AudioClip errorClip;
 
     private bool finishedRepair;
 
@@ -47,6 +50,7 @@ public class Fan : CriticalInteractable {
                     player.AutoRotate(true);
                     player.Hammer();
                     currentStage++;
+                    minigameAudioSource.PlayOneShot(succesClip);
                     if (currentStage == fanStages.Length) {
                         criticalState = Mathf.Clamp01(criticalState + successFix);
                         finishedRepair = criticalState == 1;
@@ -66,6 +70,7 @@ public class Fan : CriticalInteractable {
             }
 
             if (alpha > 1f + indicatorDetectionThreshold) {
+                minigameAudioSource.PlayOneShot(errorClip);
                 ShowInteraction();
             }
         }

@@ -17,6 +17,9 @@ public class Boiler : CriticalInteractable {
     [Header("Sounds")]
     public AudioSource normalAudioSource;
     public AudioSource criticalAudioSource;
+    public AudioSource minigameAudioSource;
+    public AudioClip succesClip;
+    public AudioClip errorClip;
 
     private bool finishedRepair;
 
@@ -64,10 +67,14 @@ public class Boiler : CriticalInteractable {
                     criticalState = Mathf.Clamp01(criticalState + successFix);
                     finishedRepair = criticalState == 1;
 
+                    minigameAudioSource.PlayOneShot(succesClip);
+
                     if (finishedRepair) {
                         HideInteraction();
                     }
                 } else {
+                    minigameAudioSource.PlayOneShot(errorClip);
+
                     ShowInteraction();
                 }
             }

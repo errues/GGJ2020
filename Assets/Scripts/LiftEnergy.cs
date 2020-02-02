@@ -14,6 +14,10 @@ public class LiftEnergy : Interactable {
     [Header("Sounds")]
     public AudioClip powerOnClip;
     public AudioClip powerOffClip;
+    public AudioSource powerAudioSource;
+    public AudioSource minigameAudioSource;
+    public AudioClip succesClip;
+    public AudioClip errorClip;
 
     private bool energyOn;
     private int[] activationCode;
@@ -26,12 +30,9 @@ public class LiftEnergy : Interactable {
     private float initialTime;
     private int currentTimeIndex;
 
-    private AudioSource audioSource;
-
     private void Awake() {
         energyOn = true;
         liftEnergyButtons = interactionIndicator.GetComponent<LiftEnergyButtons>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start() {
@@ -68,7 +69,7 @@ public class LiftEnergy : Interactable {
         }
         pressedCode = 0;
         GenerateCode();
-        audioSource.PlayOneShot(powerOffClip);
+        powerAudioSource.PlayOneShot(powerOffClip);
     }
 
     private void PowerOn() {
@@ -79,7 +80,7 @@ public class LiftEnergy : Interactable {
         }
         HideInteraction();
         WaitToNextBlackout();
-        audioSource.PlayOneShot(powerOnClip);
+        powerAudioSource.PlayOneShot(powerOnClip);
     }
 
     private void GenerateCode() {
@@ -123,9 +124,11 @@ public class LiftEnergy : Interactable {
 
                     pressedCode++;
                     liftEnergyButtons.SetCodeProgress(pressedCode);
+                    minigameAudioSource.PlayOneShot(succesClip);
                 } else {
                     pressedCode = 0;
                     liftEnergyButtons.SetCodeProgress(pressedCode);
+                    minigameAudioSource.PlayOneShot(errorClip);
                 }
             }
 
