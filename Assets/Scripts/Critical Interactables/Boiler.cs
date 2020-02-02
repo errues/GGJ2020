@@ -10,6 +10,9 @@ public class Boiler : CriticalInteractable {
     public float indicatorPosition = 0.5f;
     public float indicatorDetectionThreshold = 0.05f;
 
+    [Header("Particles")]
+    public ParticleSystem[] particles;
+
     private bool finishedRepair;
 
     private float alpha;
@@ -73,10 +76,19 @@ public class Boiler : CriticalInteractable {
     protected override void ApplyCriticalState() {
         if (repairState == RepairState.CRITICAL) {
             anim.SetBool("broken", true);
+            foreach (ParticleSystem ps in particles) {
+                ps.Play(true);
+            }
         } else if (repairState == RepairState.NEEDREPAIR) {
             anim.SetBool("broken", true);
+            foreach (ParticleSystem ps in particles) {
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            }
         } else {
             anim.SetBool("broken", false);
+            foreach (ParticleSystem ps in particles) {
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            }
         }
     }
 

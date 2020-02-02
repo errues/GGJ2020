@@ -15,6 +15,9 @@ public class Fan : CriticalInteractable {
     public FanStage[] fanStages;
     public float indicatorDetectionThreshold = 0.1f;
 
+    [Header("Particles")]
+    public ParticleSystem[] particles;
+
     private bool finishedRepair;
 
     private float alpha;
@@ -71,8 +74,14 @@ public class Fan : CriticalInteractable {
     protected override void ApplyCriticalState() {
         if (repairState != RepairState.GOOD) {
             anim.SetBool("broken", true);
+            foreach (ParticleSystem ps in particles) {
+                ps.Play(true);
+            }
         } else {
             anim.SetBool("broken", false);
+            foreach (ParticleSystem ps in particles) {
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            }
         }
     }
 
