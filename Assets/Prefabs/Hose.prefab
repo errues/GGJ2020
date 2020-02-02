@@ -78,6 +78,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   distanceOffset: 0.4
+  splashWater: {fileID: 8300000, guid: 5fe2abcf7038745b9aa4d4ed9c3dfd5b, type: 3}
   waterParticles: {fileID: 2664324750744196582}
 --- !u!65 &5955721360451870255
 BoxCollider:

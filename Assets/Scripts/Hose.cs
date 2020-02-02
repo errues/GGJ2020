@@ -10,6 +10,7 @@ public class Hose : Interactable {
     public AnimationCurve rollUpCurve;
     public float distanceOffset;
 
+    public AudioClip splashWater;
     public ParticleSystem waterParticles;
     
     private float distance;
@@ -81,6 +82,7 @@ public class Hose : Interactable {
     }
 
     public void PlayHose() {
+        AudioSource.PlayClipAtPoint(splashWater, waterParticles.transform.position);
         waterParticles.Play();
     }
 
