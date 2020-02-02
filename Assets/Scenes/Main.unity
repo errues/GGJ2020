@@ -187,6 +187,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8048323361625155326, guid: 5a78ac069fbe73945b1154ff50a9f6f1,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048323361625155326, guid: 5a78ac069fbe73945b1154ff50a9f6f1,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048323361625155326, guid: 5a78ac069fbe73945b1154ff50a9f6f1,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048323361625155326, guid: 5a78ac069fbe73945b1154ff50a9f6f1,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a78ac069fbe73945b1154ff50a9f6f1, type: 3}
 --- !u!1001 &1163749725
@@ -255,6 +275,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870885079, guid: 2f6a816736317354eb715526071b4c38, type: 3}
+      propertyPath: hungerSpeedLimits.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f6a816736317354eb715526071b4c38, type: 3}
@@ -414,6 +438,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].time
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].time
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: pushButtonFix
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].criticalSpeed.x
+      value: 0.005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c90fac6e9851a741aec9039bdd21ff4, type: 3}
