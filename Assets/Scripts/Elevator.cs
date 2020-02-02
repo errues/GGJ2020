@@ -101,6 +101,16 @@ public class Elevator : Interactable {
         ShowingInteraction = true;
     }
 
+    protected override void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            player = other.GetComponent<Player>();
+
+            if (!ShowingInteraction && active) {
+                ShowInteraction();
+            }
+        }
+    }
+
     protected override void HideInteraction() {
         base.HideInteraction();
         secondFloorInteractionIndicator.SetActive(false);

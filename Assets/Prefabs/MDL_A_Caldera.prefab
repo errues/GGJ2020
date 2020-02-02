@@ -321,6 +321,7 @@ MonoBehaviour:
   - {fileID: 5323573595518180114}
   - {fileID: 4685298950164225445}
   - {fileID: 3908320712522507048}
+  criticalLight: {fileID: 6174568103873949007}
   normalAudioSource: {fileID: 4476723532166584351}
   criticalAudioSource: {fileID: 9132389694375471927}
 --- !u!82 &9132389694375471927
@@ -937,10 +938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
-    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_Name
       value: CFX3_Flying_Ember_Upward
@@ -987,6 +984,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
