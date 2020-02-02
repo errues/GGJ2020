@@ -39,7 +39,7 @@ public class Boiler : CriticalInteractable {
             }
 
             if (player.HoldingHose) {
-                criticalState = 1;
+                RestoreCriticalState();
                 finishedRepair = true;
             }
 
