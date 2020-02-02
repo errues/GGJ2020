@@ -496,7 +496,6 @@ MonoBehaviour:
   finishPanel: {fileID: 8075210557828272391}
   causeOfDeath: {fileID: 6373321176940990071}
   youDied: {fileID: 1081182137944376698}
-  winningPhrase: You did it!
   hungerFill: {fileID: 5435432450805688421}
   energyFill: {fileID: 7154381684323526912}
   restartButton: {fileID: 4401333425479614913}
@@ -504,25 +503,24 @@ MonoBehaviour:
   deathPhrases:
   - cause: 0
     phrases:
-    - '...Cause you forgot to eat, and spoiler if you dont eat, you die.'
+    - '...cause you forgot to eat, and **SPOILER** if you dont eat, you die.'
   - cause: 1
     phrases:
-    - '...Cause youre little heart couldnt handle all of that, sleep is a pretty usefull
-      thing to do.'
+    - '...cause your little heart couldn''t handle all of that, sleeping is a pretty
+      useful thing to do.'
   - cause: 2
     phrases:
-    - '...Cause a big duck had entered to your bunker, he was so big... For real,
-      so big. '
+    - '...cause you were devoured by a giant duck. It was really big.'
   - cause: 3
     phrases:
-    - '...Cause the boiler was on fire, and, well, it explote.'
+    - '...cause the boiler was on fire, and, well, it exploted.'
   - cause: 4
     phrases:
-    - '...Cause your machine to clean the air stop working, so you had no air. Btw
-      without oxigen you die.'
+    - '...cause your air purifier stopped working, so you had no air. Btw, without
+      oxigen you die.'
   - cause: 5
     phrases:
-    - OH no wait didn't you just win? holly shit good job
+    - OH! No, wait, didn't you just win? holy shit, good job!
 --- !u!1 &1773226523700079140
 GameObject:
   m_ObjectHideFlags: 0
