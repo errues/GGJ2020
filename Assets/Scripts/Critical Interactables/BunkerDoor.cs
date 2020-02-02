@@ -34,6 +34,7 @@ public class BunkerDoor : CriticalInteractable {
 
             criticalState = Mathf.Clamp01(criticalState + pushButtonFix);
             finishedRepair = criticalState == 1;
+            SetCriticalState();
 
             if (finishedRepair) {
                 HideInteraction();

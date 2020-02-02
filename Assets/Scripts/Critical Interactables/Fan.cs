@@ -53,7 +53,9 @@ public class Fan : CriticalInteractable {
                     minigameAudioSource.PlayOneShot(succesClip);
                     if (currentStage == fanStages.Length) {
                         criticalState = Mathf.Clamp01(criticalState + successFix);
+                        Debug.Log(criticalState);
                         finishedRepair = criticalState == 1;
+                        SetCriticalState();
 
                         if (finishedRepair) {
                             HideInteraction();
@@ -80,8 +82,16 @@ public class Fan : CriticalInteractable {
         }
     }
 
+    protected override void SetCriticalState() {
+        base.SetCriticalState();
+        if (repairState != RepairState.GOOD) {
+            GameController.instance.canvasController.SetFogAlpha(1 - (criticalState / noNeedRepairState));
+        }
+    }
+
     protected override void ApplyCriticalState() {
         if (repairState != RepairState.GOOD) {
+            GameController.instance.canvasController.ShowFog();
             anim.SetBool("broken", true);
             foreach (ParticleSystem ps in particles) {
                 ps.Play(true);
@@ -90,6 +100,7 @@ public class Fan : CriticalInteractable {
             criticalAudioSource.volume = 1;
             normalAudioSource.volume = 0;
         } else {
+            GameController.instance.canvasController.HideFog();
             anim.SetBool("broken", false);
             foreach (ParticleSystem ps in particles) {
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);

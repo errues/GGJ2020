@@ -26,6 +26,12 @@ public class CanvasController : MonoBehaviour {
 
     public List<DeathPhrases> deathPhrases;
 
+    public GameObject fog;
+    public Image[] fogSprites;
+    public float maxAlphaFog = 0.6f;
+
+
+
     private void Awake() {
         instance = this;
     }
@@ -58,5 +64,21 @@ public class CanvasController : MonoBehaviour {
         int mins = seconds / 60;
         int secs = seconds % 60;
         timer.text = mins.ToString() + ":" + (secs < 10 ? "0" : "") + secs.ToString();
+    }
+
+    public void ShowFog() {
+        fog.SetActive(true);
+    }
+
+    public void HideFog() {
+        fog.SetActive(false);
+    }
+
+    public void SetFogAlpha(float alpha) {
+        foreach(Image img in fogSprites) {
+            Color color = img.color;
+            color.a = Mathf.Lerp(0, maxAlphaFog, alpha);
+            img.color = color;
+        }
     }
 }

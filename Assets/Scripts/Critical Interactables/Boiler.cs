@@ -66,6 +66,7 @@ public class Boiler : CriticalInteractable {
                     player.Hammer();
                     criticalState = Mathf.Clamp01(criticalState + successFix);
                     finishedRepair = criticalState == 1;
+                    SetCriticalState();
 
                     minigameAudioSource.PlayOneShot(succesClip);
 
