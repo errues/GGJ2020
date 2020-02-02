@@ -37,8 +37,10 @@ public class PlayerBars : MonoBehaviour {
 
         canvasController.SetBarsValues(currentHunger / 100, currentEnergy / 100);
 
-        if (currentEnergy == 0 || currentHunger == 0) {
-            GameController.instance.FinishGame();
+        if (currentEnergy == 0) {
+            GameController.instance.FinishGame(CauseOfDeath.ENERGY);
+        } else if (currentHunger == 0) {
+            GameController.instance.FinishGame(CauseOfDeath.HUNGER);
         }
     }
 

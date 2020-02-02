@@ -16,13 +16,20 @@ public class GameController : MonoBehaviour {
         timeLeft = timeInSeconds;
     }
 
-    public void FinishGame() {
+    public void FinishGame(CauseOfDeath cause) {
+        if (cause != CauseOfDeath.VICTORY) {
+            GetComponent<MusicController>().PlayDeathClip(cause);
+        }
 
-        canvasController.ShowFinishPanel();
+        canvasController.ShowFinishPanel(cause);
     }
 
     private void Update() {
         timeLeft -= Time.deltaTime;
+
+        if (timeLeft <= 0) {
+            canvasController.ShowFinishPanel(CauseOfDeath.VICTORY);
+        }
 
         canvasController.SetTimer(Mathf.CeilToInt(timeLeft));
     }

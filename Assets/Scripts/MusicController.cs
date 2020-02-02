@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicController : MonoBehaviour {
+    [System.Serializable]
+    public class DeathClip {
+        public CauseOfDeath cause;
+        public AudioClip clip;
+    }
+
     public AudioClip musicClip;
+
+    public List<DeathClip> deathClips;
 
     private AudioSource audioSource;
 
@@ -20,7 +28,13 @@ public class MusicController : MonoBehaviour {
         audioSource.Play();
     }
 
-    public void StopMusic() {
+    public void PlayDeathClip(CauseOfDeath cause) {
         audioSource.Stop();
+        foreach (DeathClip dc in deathClips) {
+            if (dc.cause == cause) {
+                audioSource.PlayOneShot(dc.clip);
+                break;
+            }
+        }
     }
 }

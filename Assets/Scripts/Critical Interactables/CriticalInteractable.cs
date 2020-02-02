@@ -15,6 +15,7 @@ public class CriticalInteractable : Interactable {
         CRITICAL
     }
 
+    public CauseOfDeath causeOfDeath;
     public float timeToStart = 0f;
 
     public CriticalSpeed[] criticalSpeeds = new CriticalSpeed[3];
@@ -121,6 +122,6 @@ public class CriticalInteractable : Interactable {
     }
 
     private void CriticalFinish() {
-        GameController.instance.FinishGame();
+        GameController.instance.FinishGame(causeOfDeath);
     }
 }
