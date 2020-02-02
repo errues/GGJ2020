@@ -24,4 +24,10 @@ public class BunkerDoor : CriticalInteractable {
             ShowInteraction();
         }
     }
+
+    protected override void ShowInteraction() {
+        if (repairState != RepairState.GOOD) {
+            base.ShowInteraction();
+        }
+    }
 }

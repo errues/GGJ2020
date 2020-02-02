@@ -95,7 +95,9 @@ public class Fan : CriticalInteractable {
     }
 
     protected override void ShowInteraction() {
-        base.ShowInteraction();
+        if (repairState != RepairState.GOOD) {
+            base.ShowInteraction();
+        }
 
         finishedRepair = false;
         currentStage = 0;

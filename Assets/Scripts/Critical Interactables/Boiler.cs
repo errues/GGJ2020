@@ -103,10 +103,11 @@ public class Boiler : CriticalInteractable {
     }
 
     protected override void ShowInteraction() {
-        base.ShowInteraction();
-
-        if (boilerBar) {
-            boilerBar.ShowIndicator(indicatorPosition, indicatorDetectionThreshold);
+        if (repairState != RepairState.GOOD) {
+            base.ShowInteraction();
+            if (boilerBar) {
+                boilerBar.ShowIndicator(indicatorPosition, indicatorDetectionThreshold);
+            }
         }
 
         finishedRepair = false;
