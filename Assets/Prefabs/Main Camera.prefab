@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 5
+  minLimits: {x: -7.56, y: 2.43}
+  maxLimits: {x: 9.93, y: 7.52}
 --- !u!20 &6921306639682141992
 Camera:
   m_ObjectHideFlags: 0
