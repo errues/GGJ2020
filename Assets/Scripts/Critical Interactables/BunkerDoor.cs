@@ -10,6 +10,8 @@ public class BunkerDoor : CriticalInteractable {
 
     protected override void InteractLoop() {
         if (Input.GetButtonDown("Use") && (repairState != RepairState.GOOD || !finishedRepair)) {
+            player.Hammer();
+
             criticalState = Mathf.Clamp01(criticalState + pushButtonFix);
             finishedRepair = criticalState == 1;
 

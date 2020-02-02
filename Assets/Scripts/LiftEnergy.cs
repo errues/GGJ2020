@@ -111,6 +111,7 @@ public class LiftEnergy : Interactable {
 
             if (pressedCode == activationCode.Length) {
                 PowerOn();
+                player.Hammer();
             }
         }
     }

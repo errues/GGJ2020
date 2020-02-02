@@ -41,6 +41,7 @@ public class Boiler : CriticalInteractable {
 
             if (Input.GetButtonDown("Use")) {
                 if (alpha >= indicatorPosition - indicatorDetectionThreshold && alpha <= indicatorPosition + indicatorDetectionThreshold) {
+                    player.Hammer();
                     criticalState = Mathf.Clamp01(criticalState + successFix);
                     finishedRepair = criticalState == 1;
 

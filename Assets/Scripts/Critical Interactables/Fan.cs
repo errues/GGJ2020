@@ -39,6 +39,7 @@ public class Fan : CriticalInteractable {
                 if (alpha >= 1f - indicatorDetectionThreshold && alpha <= 1f + indicatorDetectionThreshold) {
                     currentStage++;
                     if (currentStage == fanStages.Length) {
+                        player.Hammer();
                         criticalState = Mathf.Clamp01(criticalState + successFix);
                         finishedRepair = criticalState == 1;
 
