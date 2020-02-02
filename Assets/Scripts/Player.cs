@@ -17,6 +17,9 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public GameObject boy;
+    public GameObject girl;
+
     public float movementSpeed;
     public float rotationSpeed;
     public float inLadderMovementSpeed;
@@ -49,12 +52,19 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
 
         OnFirstFloor = transform.position.y < Bunker.instance.secondLevelHeight - 1;
         InLadder = false;
 
         autoMovements = new Queue<AutoMovement>();
+
+        if (Random.Range(0, 2) == 0) {
+            boy.SetActive(false);
+            girl.SetActive(true);
+            animator = girl.GetComponent<Animator>();
+        } else {
+            animator = boy.GetComponent<Animator>();
+        }
     }
 
     private void Update() {
