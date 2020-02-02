@@ -22,7 +22,17 @@ public class Boiler : CriticalInteractable {
     }
 
     protected override void InteractLoop() {
-        if (repairState != RepairState.GOOD || !finishedRepair) {
+        if (repairState == RepairState.CRITICAL) {
+            if (ShowingInteraction) {
+                HideInteraction();
+            }
+
+            if (player.HoldingHose) {
+                criticalState = 1;
+                finishedRepair = true;
+            }
+
+        } else if (repairState != RepairState.GOOD || !finishedRepair) {
 
             if (increment) {
                 alpha += Time.deltaTime * indicatorSpeed;
@@ -41,6 +51,7 @@ public class Boiler : CriticalInteractable {
 
             if (Input.GetButtonDown("Use")) {
                 if (alpha >= indicatorPosition - indicatorDetectionThreshold && alpha <= indicatorPosition + indicatorDetectionThreshold) {
+                    player.Hammer();
                     criticalState = Mathf.Clamp01(criticalState + successFix);
                     finishedRepair = criticalState == 1;
 

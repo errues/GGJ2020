@@ -61,13 +61,17 @@ public class CriticalInteractable : Interactable {
 
     protected void ChangeCriticalSpeed() {
         Vector2 speed;
-        if (currentCriticalSpeedIndex == criticalSpeeds.Length - 1) {
-            speed = new Vector2(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y);
+        if (currentCriticalSpeedIndex == criticalSpeeds.Length) {
+            speed = new Vector2(criticalSpeeds[currentCriticalSpeedIndex - 1].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex - 1].criticalSpeed.y);
         } else {
-            speed = new Vector2(
-                Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex + 1].criticalSpeed.x, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time),
-                Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y, criticalSpeeds[currentCriticalSpeedIndex + 1].criticalSpeed.y, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time)
-                );
+            if (currentCriticalSpeedIndex == 0) {
+                speed = new Vector2(criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y);
+            } else {
+                speed = new Vector2(
+                    Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex - 1].criticalSpeed.x, criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.x, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time),
+                    Mathf.Lerp(criticalSpeeds[currentCriticalSpeedIndex - 1].criticalSpeed.y, criticalSpeeds[currentCriticalSpeedIndex].criticalSpeed.y, (criticalSpeeds[currentCriticalSpeedIndex].time - (Time.time - initialTime)) / criticalSpeeds[currentCriticalSpeedIndex].time)
+                    );
+            }
 
             if (Time.time - initialTime > criticalSpeeds[currentCriticalSpeedIndex].time) {
                 currentCriticalSpeedIndex++;
