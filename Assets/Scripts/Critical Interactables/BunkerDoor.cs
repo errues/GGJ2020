@@ -8,9 +8,12 @@ public class BunkerDoor : CriticalInteractable {
     public Rigidbody[] boards = new Rigidbody[3];
     public float boardSpeed = 2f;
 
+    public AudioClip doorHit;
+
     private Vector3[] boardPositions;
     private Quaternion[] boardRotations;
     private bool finishedRepair;
+
 
     protected override void Awake() {
         base.Awake();
@@ -43,6 +46,8 @@ public class BunkerDoor : CriticalInteractable {
         base.SetCriticalState();
         if (criticalState < noNeedRepairState - ((noNeedRepairState - criticalRepairState) / 2f) && criticalState >= criticalRepairState) {
             LaunchBoard(0);
+        } else if (criticalState >= noNeedRepairState - ((noNeedRepairState - criticalRepairState) / 2f) && criticalState <= noNeedRepairState) {
+            ReturnBoard(0);
         }
     }
 
