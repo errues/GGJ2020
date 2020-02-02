@@ -17,11 +17,14 @@ public class MainMenuController : MonoBehaviour {
 
     private void Start() {
         playButton.Select();
+
+        Time.timeScale = 1;
+        AudioListener.pause = false;
     }
 
     public void StartGame() {
         loadingPanel.SetActive(true);
-        StartCoroutine(LoadAsyncScene("Alex_Pruebas"));
+        StartCoroutine(LoadAsyncScene("Main"));
     }
 
     private IEnumerator LoadAsyncScene(string sceneName) {
