@@ -141,11 +141,13 @@ MonoBehaviour:
   interactionIndicator: {fileID: 2496120412410700935}
   timesNextBlackout:
   - time: 60
-    criticalSpeed: {x: 25, y: 40}
-  - time: 120
-    criticalSpeed: {x: 20, y: 30}
+    criticalSpeed: {x: 35, y: 40}
+  - time: 90
+    criticalSpeed: {x: 5, y: 15}
   - time: 180
-    criticalSpeed: {x: 15, y: 20}
+    criticalSpeed: {x: 10, y: 20}
+  - time: 220
+    criticalSpeed: {x: 3, y: 10}
   codeLenght: 3
   elevator: {fileID: 0}
   lights:
@@ -256,6 +258,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8530174787129529640}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 0763f646c95acc24dad7a29dd7a9d2e9,
+        type: 3}
+      propertyPath: m_Name
+      value: MDL_A_Electricidad
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0763f646c95acc24dad7a29dd7a9d2e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -310,11 +317,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0763f646c95acc24dad7a29dd7a9d2e9,
-        type: 3}
-      propertyPath: m_Name
-      value: MDL_A_Electricidad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0763f646c95acc24dad7a29dd7a9d2e9, type: 3}

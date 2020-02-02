@@ -300,18 +300,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIndicator: {fileID: 7148297122779520955}
+  causeOfDeath: 3
   timeToStart: 5
   criticalSpeeds:
-  - time: 60
+  - time: 20
     criticalSpeed: {x: 0.005, y: 0.01}
+  - time: 50
+    criticalSpeed: {x: 0.01, y: 0.03}
+  - time: 80
+    criticalSpeed: {x: 0.04, y: 0.09}
+  - time: 100
+    criticalSpeed: {x: 0.03, y: 0.08}
   - time: 180
-    criticalSpeed: {x: 0.01, y: 0.02}
-  - time: 280
-    criticalSpeed: {x: 0.02, y: 0.04}
-  - time: 500
-    criticalSpeed: {x: 0.04, y: 0.08}
-  noNeedRepairState: 0.8
-  criticalRepairState: 0.33
+    criticalSpeed: {x: 0.07, y: 0.15}
+  noNeedRepairState: 0.9
+  criticalRepairState: 0.5
   successFix: 0.2
   indicatorSpeed: 0.8
   indicatorPosition: 0.65

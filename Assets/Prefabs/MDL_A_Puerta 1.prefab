@@ -281,14 +281,18 @@ MonoBehaviour:
   causeOfDeath: 2
   timeToStart: 0
   criticalSpeeds:
-  - time: 60
+  - time: 10
+    criticalSpeed: {x: 0.005, y: 0.01}
+  - time: 30
     criticalSpeed: {x: 0.01, y: 0.02}
-  - time: 60
-    criticalSpeed: {x: 0.01, y: 0.02}
-  - time: 60
-    criticalSpeed: {x: 0.01, y: 0.02}
+  - time: 50
+    criticalSpeed: {x: 0.01, y: 0.04}
+  - time: 100
+    criticalSpeed: {x: 0.03, y: 0.06}
+  - time: 200
+    criticalSpeed: {x: 0.08, y: 0.12}
   noNeedRepairState: 0.8
-  criticalRepairState: 0.33
+  criticalRepairState: 0.4
   pushButtonFix: 0.1
   boards:
   - {fileID: 2187705809843540629}

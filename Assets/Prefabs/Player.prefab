@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7a6e41b30705041b0b7d0324153814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSpeedLimits: {x: 1, y: 3}
+  hungerSpeedLimits: {x: 0.5, y: 2}
   energySpeedLimits: {x: 1, y: 3}
   fillingSpeed: 20
 --- !u!1001 &3024411000177128426
