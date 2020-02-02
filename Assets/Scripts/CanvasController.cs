@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CanvasController : MonoBehaviour {
     public static CanvasController instance;
@@ -10,6 +11,8 @@ public class CanvasController : MonoBehaviour {
 
     public Image hungerFill;
     public Image energyFill;
+
+    public TextMeshProUGUI timer;
 
 
     private void Awake() {
@@ -27,5 +30,11 @@ public class CanvasController : MonoBehaviour {
 
         scale.x = energy;
         energyFill.rectTransform.localScale = scale;
+    }
+
+    public void SetTimer(int seconds) {
+        int mins = seconds / 60;
+        int secs = seconds % 60;
+        timer.text = mins.ToString() + ":" + (secs < 10 ? "0" : "") + secs.ToString();
     }
 }

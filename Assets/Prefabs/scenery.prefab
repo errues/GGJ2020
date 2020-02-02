@@ -23095,11 +23095,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4193333317728053750}
     m_Modifications:
-    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
-        type: 3}
-      propertyPath: m_Name
-      value: Hose
-      objectReference: {fileID: 0}
     - target: {fileID: 5955721360451870225, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23154,6 +23149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Hose
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e9339658d5ac542af7a4ed9a9fd4a9, type: 3}
@@ -23248,7 +23248,7 @@ PrefabInstance:
     - target: {fileID: 1627403478322997106, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5721763014951445767, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
