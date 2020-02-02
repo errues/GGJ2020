@@ -110,7 +110,7 @@ MonoBehaviour:
   - time: 60
     criticalSpeed: {x: 0.01, y: 0.02}
   - time: 160
-    criticalSpeed: {x: 0.03, y: 0.2}
+    criticalSpeed: {x: 0.01, y: 0.13}
   noNeedRepairState: 0.5
   criticalRepairState: 0.5
   successFix: 1

@@ -308,12 +308,12 @@ MonoBehaviour:
     criticalSpeed: {x: 0.005, y: 0.01}
   - time: 50
     criticalSpeed: {x: 0.01, y: 0.03}
-  - time: 80
+  - time: 90
     criticalSpeed: {x: 0.04, y: 0.09}
   - time: 100
     criticalSpeed: {x: 0.02, y: 0.05}
   - time: 180
-    criticalSpeed: {x: 0.01, y: 0.15}
+    criticalSpeed: {x: 0.005, y: 0.11}
   noNeedRepairState: 0.8
   criticalRepairState: 0.5
   successFix: 0.2
