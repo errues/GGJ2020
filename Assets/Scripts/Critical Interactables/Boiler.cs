@@ -22,6 +22,7 @@ public class Boiler : CriticalInteractable {
     public AudioSource minigameAudioSource;
     public AudioClip succesClip;
     public AudioClip errorClip;
+    public AudioClip explosionClip;
 
     private bool finishedRepair;
 
@@ -131,5 +132,10 @@ public class Boiler : CriticalInteractable {
         finishedRepair = false;
         alpha = 0f;
         increment = true;
+    }
+
+    protected override void CriticalFinish() {
+        base.CriticalFinish();
+        AudioSource.PlayClipAtPoint(explosionClip, Vector3.zero);
     }
 }

@@ -121,7 +121,7 @@ public class CriticalInteractable : Interactable {
         ChangeCriticalSpeed();
     }
 
-    private void CriticalFinish() {
+    protected virtual void CriticalFinish() {
         GameController.instance.FinishGame(causeOfDeath);
     }
 }
