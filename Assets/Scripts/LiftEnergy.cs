@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LiftEnergy : Interactable {
     [Header("Lift Energy")]
+    public CriticalInteractable.CriticalSpeed[] timesNextBlackout = new CriticalInteractable.CriticalSpeed[3];
     public int codeLenght = 3;
 
     private bool energyOn;
@@ -14,9 +15,39 @@ public class LiftEnergy : Interactable {
     private bool buttonUpPressed;
     private bool buttonDownPressed;
 
+    private float initialTime;
+    private int currentTimeIndex;
+
     private void Awake() {
         energyOn = true;
         liftEnergyButtons = interactionIndicator.GetComponent<LiftEnergyButtons>();
+    }
+
+    private void Start() {
+        initialTime = Time.time;
+        currentTimeIndex = 0;
+
+        StartCoroutine(WaitToNextBlackout());
+    }
+
+    private IEnumerator WaitToNextBlackout() {
+        Vector2 time;
+        if (currentTimeIndex == timesNextBlackout.Length - 1) {
+            time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
+        } else {
+            time = new Vector2(
+                Mathf.Lerp(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex + 1].criticalSpeed.x, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time),
+                Mathf.Lerp(timesNextBlackout[currentTimeIndex].criticalSpeed.y, timesNextBlackout[currentTimeIndex + 1].criticalSpeed.y, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time)
+                );
+
+            if (Time.time - initialTime > timesNextBlackout[currentTimeIndex].time) {
+                currentTimeIndex++;
+            }
+        }
+
+
+        yield return new WaitForSeconds(Random.Range(time.x, time.y));
+        PowerOff();
     }
 
     public void PowerOff() {
@@ -28,6 +59,7 @@ public class LiftEnergy : Interactable {
     private void PowerOn() {
         energyOn = true;
         HideInteraction();
+        WaitToNextBlackout();
     }
 
     private void GenerateCode() {
