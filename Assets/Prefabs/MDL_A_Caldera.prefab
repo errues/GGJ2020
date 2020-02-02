@@ -472,17 +472,17 @@ PrefabInstance:
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: 0.135
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.36
+      value: 2.548
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.18
+      value: 2.936
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
@@ -527,17 +527,17 @@ PrefabInstance:
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7109707
+      value: 0.50092864
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7109707
+      value: 0.50092864
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7109707
+      value: 0.50092864
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9448be045e0648443aea8b19782dff8d, type: 3}
@@ -649,6 +649,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
+    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_Name
       value: CFX3_Flying_Ember_Upward
@@ -695,10 +699,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

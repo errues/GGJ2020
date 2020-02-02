@@ -476,17 +476,17 @@ PrefabInstance:
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.007
+      value: 0.126
       objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.998
+      value: 2.415
       objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.28
+      value: 3.565
       objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
@@ -531,17 +531,17 @@ PrefabInstance:
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2743241
+      value: 0.22492106
       objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2743241
+      value: 0.22492106
       objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2743241
+      value: 0.22492106
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e273130ac86f74f815b4b4e3be08d1, type: 3}
@@ -564,6 +564,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66408860817377234}
     m_Modifications:
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_Name
       value: CFX2_SparksHit_B Sphere (1)
@@ -624,21 +639,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 198877459487774740, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
         type: 3}
       propertyPath: looping
@@ -670,10 +670,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66408860817377234}
     m_Modifications:
-    - target: {fileID: 100008, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
-      propertyPath: m_Name
-      value: CFX3_Hit_Electric_A_Ground
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0374941
@@ -729,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 400006, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
+      propertyPath: m_Name
+      value: CFX3_Hit_Electric_A_Ground
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
       propertyPath: playOnAwake
@@ -803,6 +803,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66408860817377234}
     m_Modifications:
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_Name
       value: CFX2_SparksHit_B Sphere
@@ -849,21 +864,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198877459487774740, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
