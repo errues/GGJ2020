@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour {
 
     private float timeLeft;
 
+    private bool gameFinished;
+
     private void Awake() {
         instance = this;
 
@@ -22,23 +24,29 @@ public class GameController : MonoBehaviour {
     }
 
     public void FinishGame(CauseOfDeath cause) {
-        if (cause != CauseOfDeath.VICTORY) {
-            GetComponent<MusicController>().PlayDeathClip(cause);
-        }
+        if (!gameFinished) {
+            gameFinished = true;
 
-        AudioListener.pause = true;
-        Time.timeScale = 0;
-        canvasController.ShowFinishPanel(cause);
+            if (cause != CauseOfDeath.VICTORY) {
+                GetComponent<MusicController>().PlayDeathClip(cause);
+            }
+
+            AudioListener.pause = true;
+            Time.timeScale = 0;
+            canvasController.ShowFinishPanel(cause);
+        }
     }
 
     private void Update() {
-        if (timeLeft > 0) {
-            timeLeft -= Time.deltaTime;
-        } else {
-            FinishGame(CauseOfDeath.VICTORY);
-        }
+        if (!gameFinished) {
+            if (timeLeft > 0) {
+                timeLeft -= Time.deltaTime;
+            } else {
+                FinishGame(CauseOfDeath.VICTORY);
+            }
 
-        canvasController.SetTimer(Mathf.CeilToInt(timeLeft));
+            canvasController.SetTimer(Mathf.CeilToInt(timeLeft));
+        }
     }
 
     public void RestartLevel() {

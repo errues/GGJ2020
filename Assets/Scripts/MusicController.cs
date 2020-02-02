@@ -33,7 +33,8 @@ public class MusicController : MonoBehaviour {
         audioSource.Stop();
         foreach (DeathClip dc in deathClips) {
             if (dc.cause == cause) {
-                audioSource.PlayOneShot(dc.clip);
+                audioSource.clip = dc.clip;
+                audioSource.Play();
                 break;
             }
         }

@@ -49,7 +49,7 @@ public class PlayerBars : MonoBehaviour {
     }
 
     private void NewEnergySpeed() {
-        energySpeed = Random.Range(hungerSpeedLimits.x, hungerSpeedLimits.y);
+        energySpeed = Random.Range(energySpeedLimits.x, energySpeedLimits.y);
     }
 
     public void SetFillingEnergy(bool filling) {
