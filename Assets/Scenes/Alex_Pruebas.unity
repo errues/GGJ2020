@@ -450,5 +450,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[0].criticalSpeed.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[0].criticalSpeed.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 797122955, guid: 5c90fac6e9851a741aec9039bdd21ff4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c90fac6e9851a741aec9039bdd21ff4, type: 3}

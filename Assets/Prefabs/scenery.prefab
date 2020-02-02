@@ -12590,6 +12590,10 @@ GameObject:
   - component: {fileID: 4193333317728053748}
   - component: {fileID: 4193333317728053749}
   - component: {fileID: 4193333317728053738}
+  - component: {fileID: 3875404492360157892}
+  - component: {fileID: 3280245331364984193}
+  - component: {fileID: 3208282282708235842}
+  - component: {fileID: 7722405351678428825}
   m_Layer: 0
   m_Name: scenery
   m_TagString: Untagged
@@ -12677,6 +12681,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 8.42, z: 4}
   m_Center: {x: 12.25, y: 0, z: 0}
+--- !u!65 &3875404492360157892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193333317728053739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.882448, y: 0.79, z: 5.3413334}
+  m_Center: {x: -7.3148394, y: 0, z: -0.2550354}
+--- !u!65 &3280245331364984193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193333317728053739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.882448, y: 4.0731444, z: 0.5444975}
+  m_Center: {x: -7.3148394, y: 1.6415722, z: -2.6534534}
+--- !u!65 &3208282282708235842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193333317728053739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.882448, y: 4.0522, z: 0.5506487}
+  m_Center: {x: -7.3148394, y: 1.6310999, z: 2.140307}
+--- !u!65 &7722405351678428825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193333317728053739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0417023, y: 4.0838294, z: 5.3413334}
+  m_Center: {x: -11.235212, y: 1.6469147, z: -0.2550354}
 --- !u!1 &4193333317729160684
 GameObject:
   m_ObjectHideFlags: 0
@@ -23095,6 +23151,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4193333317728053750}
     m_Modifications:
+    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Hose
+      objectReference: {fileID: 0}
     - target: {fileID: 5955721360451870225, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23150,11 +23211,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
-        type: 3}
-      propertyPath: m_Name
-      value: Hose
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e9339658d5ac542af7a4ed9a9fd4a9, type: 3}
 --- !u!4 &2202276446940688944 stripped
@@ -23170,6 +23226,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4193333317728053750}
     m_Modifications:
+    - target: {fileID: 8530174787129529645, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
+        type: 3}
+      propertyPath: m_Name
+      value: FuseBox
+      objectReference: {fileID: 0}
     - target: {fileID: 8530174787129529640, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23225,11 +23286,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8530174787129529645, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
-        type: 3}
-      propertyPath: m_Name
-      value: FuseBox
-      objectReference: {fileID: 0}
     - target: {fileID: 8530174787129529642, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
       propertyPath: elevator
@@ -23245,11 +23301,6 @@ PrefabInstance:
       propertyPath: lights.Array.data[1]
       value: 
       objectReference: {fileID: 4193333317741832570}
-    - target: {fileID: 1627403478322997106, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5721763014951445767, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
       propertyPath: m_Controller

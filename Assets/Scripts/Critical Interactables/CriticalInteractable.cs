@@ -87,7 +87,7 @@ public class CriticalInteractable : Interactable {
         currentCriticalSpeed = Random.Range(speed.x, speed.y);
     }
 
-    private void SetCriticalState() {
+    protected virtual void SetCriticalState() {
         RepairState lastRepairState = repairState;
 
         if (criticalState < criticalRepairState && repairState != RepairState.CRITICAL) {
