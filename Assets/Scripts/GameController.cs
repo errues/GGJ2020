@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour {
         instance = this;
 
         timeLeft = timeInSeconds;
+
+        Time.timeScale = 1;
+        AudioListener.pause = false;
     }
 
     public void FinishGame(CauseOfDeath cause) {
@@ -23,14 +26,16 @@ public class GameController : MonoBehaviour {
             GetComponent<MusicController>().PlayDeathClip(cause);
         }
 
+        AudioListener.pause = true;
+        Time.timeScale = 0;
         canvasController.ShowFinishPanel(cause);
     }
 
     private void Update() {
-        timeLeft -= Time.deltaTime;
-
-        if (timeLeft <= 0) {
-            canvasController.ShowFinishPanel(CauseOfDeath.VICTORY);
+        if (timeLeft > 0) {
+            timeLeft -= Time.deltaTime;
+        } else {
+            FinishGame(CauseOfDeath.VICTORY);
         }
 
         canvasController.SetTimer(Mathf.CeilToInt(timeLeft));

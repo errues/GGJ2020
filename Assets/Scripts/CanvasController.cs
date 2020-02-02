@@ -16,10 +16,11 @@ public class CanvasController : MonoBehaviour {
     public Transform finishPanel;
     public TextMeshProUGUI causeOfDeath;
     public TextMeshProUGUI youDied;
-    public string winningPhrase = "You did it!";
 
     public Image hungerFill;
     public Image energyFill;
+
+    public Button restartButton;
 
     public TextMeshProUGUI timer;
 
@@ -29,11 +30,11 @@ public class CanvasController : MonoBehaviour {
         instance = this;
     }
 
-    public void ShowFinishPanel(CauseOfDeath cause) {
-        if (cause == CauseOfDeath.VICTORY) {
-            youDied.text = winningPhrase;
-        }
+    private void Start() {
+        restartButton.Select();
+    }
 
+    public void ShowFinishPanel(CauseOfDeath cause) {
         foreach (DeathPhrases dp in deathPhrases) {
             if (dp.cause == cause) {
                 causeOfDeath.text = dp.phrases[Random.Range(0, dp.phrases.Count)];

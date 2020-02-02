@@ -14,9 +14,12 @@ public class BunkerDoor : CriticalInteractable {
     private Quaternion[] boardRotations;
     private bool finishedRepair;
 
+    private AudioSource audioSource;
+
 
     protected override void Awake() {
         base.Awake();
+        audioSource = GetComponent<AudioSource>();
         boardPositions = new Vector3[3];
         boardRotations = new Quaternion[3];
         for(int i=0; i < boards.Length; i++) {
@@ -44,7 +47,8 @@ public class BunkerDoor : CriticalInteractable {
 
     protected override void SetCriticalState() {
         base.SetCriticalState();
-        if (criticalState < noNeedRepairState - ((noNeedRepairState - criticalRepairState) / 2f) && criticalState >= criticalRepairState) {
+        if (criticalState < noNeedRepairState - ((noNeedRepairState - criticalRepairState) / 2f) && criticalState >= criticalRepairState && boards[0].isKinematic) {
+            anim.SetTrigger("hit");
             LaunchBoard(0);
         } else if (criticalState >= noNeedRepairState - ((noNeedRepairState - criticalRepairState) / 2f) && criticalState <= noNeedRepairState) {
             ReturnBoard(0);
@@ -53,8 +57,11 @@ public class BunkerDoor : CriticalInteractable {
 
     protected override void ApplyCriticalState() {
         if (repairState == RepairState.CRITICAL) {
+            anim.SetBool("strongHit", true);
             LaunchBoard(2);
         } else if (repairState == RepairState.NEEDREPAIR) {
+            anim.SetBool("strongHit", false);
+            anim.SetTrigger("hit");
             LaunchBoard(1);
             ReturnBoard(2);
         } else {
@@ -89,6 +96,10 @@ public class BunkerDoor : CriticalInteractable {
 
             yield return null;
         }
+    }
+
+    public void PlayDoorHit() {
+        audioSource.PlayOneShot(doorHit);
     }
 
     protected override void ShowInteraction() {
