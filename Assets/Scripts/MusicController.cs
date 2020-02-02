@@ -17,6 +17,7 @@ public class MusicController : MonoBehaviour {
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
+        audioSource.ignoreListenerPause = true;
     }
 
     private void Start() {

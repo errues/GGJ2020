@@ -21,12 +21,18 @@ public class CanvasController : MonoBehaviour {
     public Image hungerFill;
     public Image energyFill;
 
+    public Button restartButton;
+
     public TextMeshProUGUI timer;
 
     public List<DeathPhrases> deathPhrases;
 
     private void Awake() {
         instance = this;
+    }
+
+    private void Start() {
+        restartButton.Select();
     }
 
     public void ShowFinishPanel(CauseOfDeath cause) {

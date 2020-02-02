@@ -499,6 +499,7 @@ MonoBehaviour:
   winningPhrase: You did it!
   hungerFill: {fileID: 5435432450805688421}
   energyFill: {fileID: 7154381684323526912}
+  restartButton: {fileID: 4401333425479614913}
   timer: {fileID: 8048323361625155326}
   deathPhrases:
   - cause: 0
@@ -1057,7 +1058,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4758358592ed59f48a638ff8dc4bfb39, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
