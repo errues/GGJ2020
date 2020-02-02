@@ -31,15 +31,21 @@ public class PlayerSounds : MonoBehaviour {
     }
 
     public void PlayHammerSound() {
-        hammerSource.PlayOneShot(hammerClips[Random.Range(0, hammerClips.Count)]);
+        if (hammerClips.Count > 0) {
+            hammerSource.PlayOneShot(hammerClips[Random.Range(0, hammerClips.Count)]);
+        }
     }
 
     public void PlayStepSound() {
-        stepSource.PlayOneShot(stepClips[Random.Range(0, hammerClips.Count)]);
+        if (stepClips.Count > 0) {
+            stepSource.PlayOneShot(stepClips[Random.Range(0, hammerClips.Count)]);
+        }
     }
 
     public void PlayLadderSound() {
-        ladderSource.PlayOneShot(ladderClips[leftShoeLadder ? 0 : 1]);
-        leftShoeLadder = !leftShoeLadder;
+        if (ladderClips.Count > 0) {
+            ladderSource.PlayOneShot(ladderClips[leftShoeLadder ? 0 : 1]);
+            leftShoeLadder = !leftShoeLadder;
+        }
     }
 }
