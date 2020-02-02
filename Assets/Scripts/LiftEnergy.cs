@@ -7,8 +7,13 @@ public class LiftEnergy : Interactable {
     public CriticalInteractable.CriticalSpeed[] timesNextBlackout = new CriticalInteractable.CriticalSpeed[3];
     public int codeLenght = 3;
 
+    [Header("References")]
     public Elevator elevator;
     public List<GameObject> lights;
+
+    [Header("Sounds")]
+    public AudioClip powerOnClip;
+    public AudioClip powerOffClip;
 
     private bool energyOn;
     private int[] activationCode;
@@ -21,9 +26,12 @@ public class LiftEnergy : Interactable {
     private float initialTime;
     private int currentTimeIndex;
 
+    private AudioSource audioSource;
+
     private void Awake() {
         energyOn = true;
         liftEnergyButtons = interactionIndicator.GetComponent<LiftEnergyButtons>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start() {
@@ -60,6 +68,7 @@ public class LiftEnergy : Interactable {
         }
         pressedCode = 0;
         GenerateCode();
+        audioSource.PlayOneShot(powerOffClip);
     }
 
     private void PowerOn() {
@@ -70,6 +79,7 @@ public class LiftEnergy : Interactable {
         }
         HideInteraction();
         WaitToNextBlackout();
+        audioSource.PlayOneShot(powerOnClip);
     }
 
     private void GenerateCode() {

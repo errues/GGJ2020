@@ -18,6 +18,10 @@ public class Fan : CriticalInteractable {
     [Header("Particles")]
     public ParticleSystem[] particles;
 
+    [Header("Sounds")]
+    public AudioSource normalAudioSource;
+    public AudioSource criticalAudioSource;
+
     private bool finishedRepair;
 
     private float alpha;
@@ -77,11 +81,16 @@ public class Fan : CriticalInteractable {
             foreach (ParticleSystem ps in particles) {
                 ps.Play(true);
             }
+
+            criticalAudioSource.volume = 1;
+            normalAudioSource.volume = 0;
         } else {
             anim.SetBool("broken", false);
             foreach (ParticleSystem ps in particles) {
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
+            criticalAudioSource.volume = 0;
+            normalAudioSource.volume = 1;
         }
     }
 

@@ -13,6 +13,10 @@ public class Boiler : CriticalInteractable {
     [Header("Particles")]
     public ParticleSystem[] particles;
 
+    [Header("Sounds")]
+    public AudioSource normalAudioSource;
+    public AudioSource criticalAudioSource;
+
     private bool finishedRepair;
 
     private float alpha;
@@ -79,16 +83,22 @@ public class Boiler : CriticalInteractable {
             foreach (ParticleSystem ps in particles) {
                 ps.Play(true);
             }
+            criticalAudioSource.volume = 1;
+            normalAudioSource.volume = 0;
         } else if (repairState == RepairState.NEEDREPAIR) {
             anim.SetBool("broken", true);
             foreach (ParticleSystem ps in particles) {
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
+            criticalAudioSource.volume = 0;
+            normalAudioSource.volume = 1;
         } else {
             anim.SetBool("broken", false);
             foreach (ParticleSystem ps in particles) {
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
+            criticalAudioSource.volume = 0;
+            normalAudioSource.volume = 1;
         }
     }
 
