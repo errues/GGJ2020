@@ -111,13 +111,13 @@ MonoBehaviour:
   successFix: 1
   initialBackgroundColor: {r: 1, g: 1, b: 1, a: 0.6431373}
   fanStages:
-  - indicatorSpeed: 1.3
+  - indicatorSpeed: 1.6
     fillColor: {r: 0.17899549, g: 0.735849, b: 0.14231041, a: 1}
   - indicatorSpeed: 1.6
     fillColor: {r: 0.74509805, g: 0.59141284, b: 0.12156862, a: 1}
   - indicatorSpeed: 1.8
     fillColor: {r: 0.7924528, g: 0.16820934, b: 0.16820934, a: 1}
-  indicatorDetectionThreshold: 0.1
+  indicatorDetectionThreshold: 0.15
 --- !u!65 &5842333435119641664
 BoxCollider:
   m_ObjectHideFlags: 0
