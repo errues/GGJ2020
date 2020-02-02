@@ -17,6 +17,7 @@ public class Boiler : CriticalInteractable {
     [Header("Sounds")]
     public AudioSource normalAudioSource;
     public AudioSource criticalAudioSource;
+    public AudioSource needRepairAudioSource;
     public AudioSource minigameAudioSource;
     public AudioClip succesClip;
     public AudioClip errorClip;
@@ -95,6 +96,7 @@ public class Boiler : CriticalInteractable {
             }
             criticalAudioSource.volume = 1;
             normalAudioSource.volume = 0;
+            needRepairAudioSource.volume = 0;
         } else if (repairState == RepairState.NEEDREPAIR) {
             anim.SetBool("broken", true);
             criticalLight.enabled = true;
@@ -102,7 +104,8 @@ public class Boiler : CriticalInteractable {
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
             criticalAudioSource.volume = 0;
-            normalAudioSource.volume = 1;
+            normalAudioSource.volume = 0;
+            needRepairAudioSource.volume = 1;
         } else {
             anim.SetBool("broken", false);
             criticalLight.enabled = false;
@@ -111,6 +114,7 @@ public class Boiler : CriticalInteractable {
             }
             criticalAudioSource.volume = 0;
             normalAudioSource.volume = 1;
+            needRepairAudioSource.volume = 0;
         }
     }
 

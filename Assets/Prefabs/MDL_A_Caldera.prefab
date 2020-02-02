@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 9132389694375471927}
   - component: {fileID: 4476723532166584351}
   - component: {fileID: 201586141041360821}
+  - component: {fileID: 8571869609670212760}
   m_Layer: 0
   m_Name: MDL_A_Caldera
   m_TagString: Untagged
@@ -328,6 +329,7 @@ MonoBehaviour:
   criticalLight: {fileID: 6174568103873949007}
   normalAudioSource: {fileID: 4476723532166584351}
   criticalAudioSource: {fileID: 9132389694375471927}
+  needRepairAudioSource: {fileID: 8571869609670212760}
   minigameAudioSource: {fileID: 201586141041360821}
   succesClip: {fileID: 8300000, guid: 1649494909af244fe8257e9d3f2a63d7, type: 3}
   errorClip: {fileID: 8300000, guid: 4cea6a1d6ba34443a8469e8c30b91269, type: 3}
@@ -439,7 +441,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8398661137483690799, guid: 69a9a32228eee4610b8e4573af0d23a7,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7de13ef76f203427b904f4c2154756b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d564b629550774720823c5bf113d1786, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -547,9 +549,106 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &8571869609670212760
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951340563667520261}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6759559511622977372, guid: 69a9a32228eee4610b8e4573af0d23a7,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 7de13ef76f203427b904f4c2154756b3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -863,16 +962,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40148213237840150}
     m_Modifications:
-    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
-        type: 3}
-      propertyPath: m_Name
-      value: BoilerBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -943,6 +1032,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50092864
       objectReference: {fileID: 0}
+    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
+        type: 3}
+      propertyPath: m_Name
+      value: BoilerBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9448be045e0648443aea8b19782dff8d, type: 3}
 --- !u!1 &7148297122779520955 stripped
@@ -964,10 +1063,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0019193015
@@ -1024,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.4000024
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -1053,14 +1152,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
-    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
-      propertyPath: m_Name
-      value: CFX3_Flying_Ember_Upward
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.118080616
@@ -1105,6 +1196,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
+      propertyPath: m_Name
+      value: CFX3_Flying_Ember_Upward
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
 --- !u!4 &3908320712537712232 stripped
@@ -1126,10 +1225,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9840808
@@ -1182,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -1211,10 +1310,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1709197
@@ -1266,6 +1361,10 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire (1)
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
