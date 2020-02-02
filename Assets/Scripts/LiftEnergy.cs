@@ -7,6 +7,9 @@ public class LiftEnergy : Interactable {
     public CriticalInteractable.CriticalSpeed[] timesNextBlackout = new CriticalInteractable.CriticalSpeed[3];
     public int codeLenght = 3;
 
+    public Elevator elevator;
+    public List<GameObject> lights;
+
     private bool energyOn;
     private int[] activationCode;
     private int pressedCode;
@@ -45,19 +48,26 @@ public class LiftEnergy : Interactable {
             }
         }
 
-
         yield return new WaitForSeconds(Random.Range(time.x, time.y));
         PowerOff();
     }
 
     public void PowerOff() {
         energyOn = false;
+        elevator.Deactivate();
+        foreach(GameObject go in lights) {
+            go.SetActive(false);
+        }
         pressedCode = 0;
         GenerateCode();
     }
 
     private void PowerOn() {
         energyOn = true;
+        elevator.Activate();
+        foreach (GameObject go in lights) {
+            go.SetActive(true);
+        }
         HideInteraction();
         WaitToNextBlackout();
     }
@@ -111,6 +121,7 @@ public class LiftEnergy : Interactable {
 
             if (pressedCode == activationCode.Length) {
                 PowerOn();
+                player.AutoRotate(true);
                 player.Hammer();
             }
         }

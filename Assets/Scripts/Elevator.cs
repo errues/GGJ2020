@@ -32,6 +32,8 @@ public class Elevator : Interactable {
 
     private AudioSource audioSource;
 
+    private bool active;
+
     private void Awake() {
         downFrontPosition = transform.position;
         downBackPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + backDistance);
@@ -39,6 +41,8 @@ public class Elevator : Interactable {
         topBackPosition = new Vector3(transform.position.x, Bunker.instance.secondLevelHeight, transform.position.z + backDistance);
 
         audioSource = GetComponent<AudioSource>();
+
+        active = true;
     }
 
     protected override void Update() {
@@ -64,7 +68,7 @@ public class Elevator : Interactable {
     }
 
     protected override void InteractLoop() {
-        if (Input.GetButtonDown("Use") && !player.AutoMoving && !player.HoldingHose) {
+        if (Input.GetButtonDown("Use") && !player.AutoMoving && !player.HoldingHose && active) {
             if (player.OnFirstFloor) {
                 player.AddAutoMovement(downFrontPosition, positioningTime, false, 1);
                 player.AddAutoMovement(downBackPosition, enteringTime, false, 0);
@@ -85,6 +89,16 @@ public class Elevator : Interactable {
             player.OnFirstFloor = !player.OnFirstFloor;
             player.StartAutomovement();
             HideInteraction();
+        }
+    }
+
+    protected override void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            player = other.GetComponent<Player>();
+
+            if (!ShowingInteraction && active) {
+                ShowInteraction();
+            }
         }
     }
 
@@ -165,6 +179,19 @@ public class Elevator : Interactable {
             CloseTopDoors();
         } else {
             CloseDownDoors();
+        }
+    }
+
+    public void Deactivate() {
+        active = false;
+        HideInteraction();
+    }
+
+    public void Activate() {
+        active = true;
+
+        if (player != null) {
+            ShowInteraction();
         }
     }
 }
