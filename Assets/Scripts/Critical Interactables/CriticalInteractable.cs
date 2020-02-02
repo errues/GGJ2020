@@ -60,6 +60,7 @@ public class CriticalInteractable : Interactable {
 
             if (criticalState <= 0) {
                 CriticalFinish();
+                Enabled = false;
             }
         }
     }

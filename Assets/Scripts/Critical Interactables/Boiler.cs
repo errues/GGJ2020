@@ -133,9 +133,4 @@ public class Boiler : CriticalInteractable {
         alpha = 0f;
         increment = true;
     }
-
-    protected override void CriticalFinish() {
-        base.CriticalFinish();
-        AudioSource.PlayClipAtPoint(explosionClip, Vector3.zero);
-    }
 }
