@@ -92,16 +92,6 @@ public class Elevator : Interactable {
         }
     }
 
-    protected override void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
-            player = other.GetComponent<Player>();
-
-            if (!ShowingInteraction && active) {
-                ShowInteraction();
-            }
-        }
-    }
-
     protected override void ShowInteraction() {
         if (player.OnFirstFloor) {
             interactionIndicator.SetActive(true);

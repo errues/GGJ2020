@@ -13,11 +13,21 @@ public class Bed : Interactable {
             } else {
                 player.Hammer();
             }
-        } else if (Input.GetAxisRaw("Use") != 0) {
+        } else if (Input.GetAxisRaw("Use") != 0 && !player.HoldingHose) {
             sleeping = true;
             player.GetComponent<PlayerBars>().SetFillingEnergy(true);
             player.AutoRotate(true);
             player.Hammer();
+        }
+    }
+
+    protected override void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            player = other.GetComponent<Player>();
+
+            if (!ShowingInteraction && !player.HoldingHose) {
+                ShowInteraction();
+            }
         }
     }
 }
