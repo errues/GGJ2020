@@ -9,6 +9,7 @@ public class Boiler : CriticalInteractable {
     [Range(0, 1)]
     public float indicatorPosition = 0.5f;
     public float indicatorDetectionThreshold = 0.05f;
+    public Hose boilerHose;
 
     [Header("Particles")]
     public ParticleSystem[] particles;
@@ -40,6 +41,7 @@ public class Boiler : CriticalInteractable {
             }
 
             if (player.HoldingHose) {
+                boilerHose.PlayHose();
                 RestoreCriticalState();
                 finishedRepair = true;
             }

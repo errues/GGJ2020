@@ -14621,6 +14621,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: boilerHose
+      value: 
+      objectReference: {fileID: 2202276446940688945}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13894a0ae6a4efd48b1cda8164c3c853, type: 3}
 --- !u!4 &2708450667457966886 stripped
@@ -23151,6 +23156,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4193333317728053750}
     m_Modifications:
+    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Hose
+      objectReference: {fileID: 0}
     - target: {fileID: 5955721360451870225, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23206,13 +23216,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5955721360451870227, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
-        type: 3}
-      propertyPath: m_Name
-      value: Hose
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e9339658d5ac542af7a4ed9a9fd4a9, type: 3}
+--- !u!114 &2202276446940688945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5955721360451870224, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5491849231371824161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63205235a27e41f4a8467610df37192b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2202276446940688944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5955721360451870225, guid: 44e9339658d5ac542af7a4ed9a9fd4a9,
@@ -23226,6 +23243,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4193333317728053750}
     m_Modifications:
+    - target: {fileID: 8530174787129529645, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
+        type: 3}
+      propertyPath: m_Name
+      value: FuseBox
+      objectReference: {fileID: 0}
     - target: {fileID: 8530174787129529640, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23280,11 +23302,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8530174787129529645, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
-        type: 3}
-      propertyPath: m_Name
-      value: FuseBox
       objectReference: {fileID: 0}
     - target: {fileID: 8530174787129529642, guid: 3d85aabe0da79bd4e9fee70f601f7f3a,
         type: 3}

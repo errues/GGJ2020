@@ -9,6 +9,8 @@ public class Hose : Interactable {
     public float rollUpTime;
     public AnimationCurve rollUpCurve;
     public float distanceOffset;
+
+    public ParticleSystem waterParticles;
     
     private float distance;
     private bool hoseAtOrigin;
@@ -76,6 +78,10 @@ public class Hose : Interactable {
     private void SetHoseSize() {
         hose.localScale = new Vector3(distance / 1.015535f, hose.localScale.y, hose.localScale.z);
         tap.localPosition = new Vector3(distance, tap.localPosition.y, tap.localPosition.z);
+    }
+
+    public void PlayHose() {
+        waterParticles.Play();
     }
 
     protected override void OnTriggerEnter(Collider other) {
