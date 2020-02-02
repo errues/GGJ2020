@@ -10,6 +10,7 @@ public class MainMenuController : MonoBehaviour {
 
     [Header("Credits")]
     public GameObject creditsPanel;
+    public GameObject buttonsPanel;
     public Button backButton;
 
     [Header("Loading")]
@@ -37,11 +38,13 @@ public class MainMenuController : MonoBehaviour {
 
     public void ShowCredits() {
         creditsPanel.SetActive(true);
+        buttonsPanel.SetActive(false);
         backButton.Select();
     }
 
     public void HideCredits() {
         creditsPanel.SetActive(false);
+        buttonsPanel.SetActive(true);
         playButton.Select();
     }
 
