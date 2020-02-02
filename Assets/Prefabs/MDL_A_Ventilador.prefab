@@ -130,8 +130,8 @@ MonoBehaviour:
   normalAudioSource: {fileID: 5239592892670584904}
   criticalAudioSource: {fileID: 3320506105745910860}
   minigameAudioSource: {fileID: 661899833936182816}
-  succesClip: {fileID: 8300000, guid: 1649494909af244fe8257e9d3f2a63d7, type: 3}
-  errorClip: {fileID: 8300000, guid: 4cea6a1d6ba34443a8469e8c30b91269, type: 3}
+  succesClip: {fileID: 8300000, guid: cc738797615254a69ab83ed32615dfae, type: 3}
+  errorClip: {fileID: 8300000, guid: 5ae6a54bb2a0f4aacb11b78dc2bcdc35, type: 3}
 --- !u!65 &5842333435119641664
 BoxCollider:
   m_ObjectHideFlags: 0
