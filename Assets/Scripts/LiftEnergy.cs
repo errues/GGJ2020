@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LiftEnergy : Interactable {
     [Header("Lift Energy")]
+    public float timeToStart;
     public CriticalInteractable.CriticalSpeed[] timesNextBlackout = new CriticalInteractable.CriticalSpeed[3];
     public int codeLenght = 3;
 
@@ -35,15 +36,32 @@ public class LiftEnergy : Interactable {
         liftEnergyButtons = interactionIndicator.GetComponent<LiftEnergyButtons>();
     }
 
-    private void Start() {
-        initialTime = Time.time;
+    private IEnumerator Start() {
         currentTimeIndex = 0;
-
-        StartCoroutine(WaitToNextBlackout());
+        yield return new WaitForSeconds(timeToStart);
+        initialTime = Time.time;
+        yield return StartCoroutine(WaitToNextBlackout());
     }
 
     private IEnumerator WaitToNextBlackout() {
         Vector2 time;
+        if (currentTimeIndex == timesNextBlackout.Length) {
+            time = new Vector2(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.x, timesNextBlackout[currentTimeIndex - 1].criticalSpeed.y);
+        } else {
+            if (currentTimeIndex == 0) {
+                time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
+            } else {
+                time = new Vector2(
+                    Mathf.Lerp(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.x, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time),
+                    Mathf.Lerp(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.y, timesNextBlackout[currentTimeIndex].criticalSpeed.y, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time)
+                    );
+            }
+
+            if (Time.time - initialTime > timesNextBlackout[currentTimeIndex].time) {
+                currentTimeIndex++;
+            }
+        }
+
         if (currentTimeIndex == timesNextBlackout.Length - 1) {
             time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
         } else {
