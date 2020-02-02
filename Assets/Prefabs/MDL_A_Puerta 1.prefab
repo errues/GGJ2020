@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIndicator: {fileID: 2394807016423930796}
+  causeOfDeath: 2
   timeToStart: 0
   criticalSpeeds:
   - time: 60
