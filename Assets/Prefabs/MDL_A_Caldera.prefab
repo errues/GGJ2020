@@ -311,10 +311,10 @@ MonoBehaviour:
   - time: 80
     criticalSpeed: {x: 0.04, y: 0.09}
   - time: 100
-    criticalSpeed: {x: 0.03, y: 0.08}
+    criticalSpeed: {x: 0.02, y: 0.05}
   - time: 180
-    criticalSpeed: {x: 0.07, y: 0.15}
-  noNeedRepairState: 0.9
+    criticalSpeed: {x: 0.01, y: 0.15}
+  noNeedRepairState: 0.8
   criticalRepairState: 0.5
   successFix: 0.2
   indicatorSpeed: 0.8
@@ -851,6 +851,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40148213237840150}
     m_Modifications:
+    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
+        type: 3}
+      propertyPath: m_Name
+      value: BoilerBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -921,16 +931,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50092864
       objectReference: {fileID: 0}
-    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
-        type: 3}
-      propertyPath: m_Name
-      value: BoilerBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7429582066280074608, guid: 9448be045e0648443aea8b19782dff8d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9448be045e0648443aea8b19782dff8d, type: 3}
 --- !u!1 &7148297122779520955 stripped
@@ -952,6 +952,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0019193015
@@ -1008,10 +1012,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.4000024
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -1041,6 +1041,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
+    - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
+      propertyPath: m_Name
+      value: CFX3_Flying_Ember_Upward
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.118080616
@@ -1089,10 +1093,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
-      propertyPath: m_Name
-      value: CFX3_Flying_Ember_Upward
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
 --- !u!4 &3908320712537712232 stripped
@@ -1114,6 +1114,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9840808
@@ -1166,10 +1170,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -1199,6 +1199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6135267818107902187}
     m_Modifications:
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Name
+      value: CFX4 Fire (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1709197
@@ -1250,10 +1254,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
-      propertyPath: m_Name
-      value: CFX4 Fire (1)
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: playOnAwake
