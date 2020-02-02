@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ac35d2f4ab013794fb58f482c176c925
   - enabled: 1
-    path: Assets/Scenes/Alex_Pruebas.unity
-    guid: b2e08a0c66c830d4da94e5217ffc07d0
+    path: Assets/Scenes/Main.unity
+    guid: b6731fc0c5e8bd447a931267c0b7d3d0
   m_configObjects: {}

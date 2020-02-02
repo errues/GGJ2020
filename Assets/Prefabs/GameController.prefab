@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasController: {fileID: 1773226523624991724}
-  timeInSeconds: 450
+  timeInSeconds: 433
 --- !u!114 &4917287526691609209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eba55a98e7c3874d9cf5668d0a5006b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: c5c108afa6be17647ab32d1d77f0d5bc, type: 3}
+  musicClip: {fileID: 8300000, guid: 5e65162fc7b0dc248a60f62af82cc3d0, type: 3}
   deathClips:
   - cause: 0
     clip: {fileID: 8300000, guid: 89d4d9a2637bc45f089e404d80e980d2, type: 3}

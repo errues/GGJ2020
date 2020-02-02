@@ -46,6 +46,10 @@ public class GameController : MonoBehaviour {
             }
 
             canvasController.SetTimer(Mathf.CeilToInt(timeLeft));
+
+            if (Input.GetButtonDown("Cheat1") && Input.GetButton("Cheat2") && Input.GetButton("Cheat3")) {
+                Cheat();
+            }
         }
     }
 
@@ -55,5 +59,10 @@ public class GameController : MonoBehaviour {
 
     public void GoToMainMenu() {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void Cheat() {
+        GetComponent<MusicController>().GoToTime(timeInSeconds);
+        FinishGame(CauseOfDeath.VICTORY);
     }
 }

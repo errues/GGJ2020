@@ -39,4 +39,8 @@ public class MusicController : MonoBehaviour {
             }
         }
     }
+
+    public void GoToTime(float time) {
+        audioSource.time = time;
+    }
 }
