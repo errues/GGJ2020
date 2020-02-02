@@ -154,7 +154,8 @@ AudioSource:
   m_GameObject: {fileID: 2314615362708407934}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 4754663456141372657, guid: 69a9a32228eee4610b8e4573af0d23a7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 176b773501df24b7789aa4eb1e5f1986, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -250,7 +251,8 @@ AudioSource:
   m_GameObject: {fileID: 2314615362708407934}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2622508439167941875, guid: 69a9a32228eee4610b8e4573af0d23a7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 776d695a7b9cf477c87b1d106594e4ab, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -262,9 +264,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 4
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -273,22 +275,31 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 1.0250015
+      inSlope: -4.0016
+      outSlope: -4.0016
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.3135605
+      value: 0.3833313
+      inSlope: -1.0004
+      outSlope: -1.0004
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.61016846
+      value: 0
+      inSlope: -0.2501
+      outSlope: -0.2501
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -297,7 +308,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -312,7 +323,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.49166667
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -327,7 +338,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.06
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -346,11 +357,12 @@ AudioSource:
   m_GameObject: {fileID: 2314615362708407934}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1425164578373427598, guid: 69a9a32228eee4610b8e4573af0d23a7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -760,6 +772,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1604534568519693421}
     m_Modifications:
+    - target: {fileID: 2186524094525370316, guid: e8e273130ac86f74f815b4b4e3be08d1,
+        type: 3}
+      propertyPath: m_Name
+      value: FanBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186524094525370316, guid: e8e273130ac86f74f815b4b4e3be08d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3184692414747945217, guid: e8e273130ac86f74f815b4b4e3be08d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -830,16 +852,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.22492106
       objectReference: {fileID: 0}
-    - target: {fileID: 2186524094525370316, guid: e8e273130ac86f74f815b4b4e3be08d1,
-        type: 3}
-      propertyPath: m_Name
-      value: FanBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2186524094525370316, guid: e8e273130ac86f74f815b4b4e3be08d1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e273130ac86f74f815b4b4e3be08d1, type: 3}
 --- !u!1 &5396416825991437863 stripped
@@ -861,6 +873,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66408860817377234}
     m_Modifications:
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+      propertyPath: m_Name
+      value: CFX2_SparksHit_B Sphere (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8445061
@@ -916,25 +947,6 @@ PrefabInstance:
     - target: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
-      propertyPath: m_Name
-      value: CFX2_SparksHit_B Sphere (1)
       objectReference: {fileID: 0}
     - target: {fileID: 198877459487774740, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
         type: 3}
@@ -1100,6 +1112,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66408860817377234}
     m_Modifications:
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+      propertyPath: m_Name
+      value: CFX2_SparksHit_B Sphere
+      objectReference: {fileID: 0}
     - target: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.70649403
@@ -1143,25 +1174,6 @@ PrefabInstance:
     - target: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
-      propertyPath: m_Name
-      value: CFX2_SparksHit_B Sphere
       objectReference: {fileID: 0}
     - target: {fileID: 198877459487774740, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
         type: 3}

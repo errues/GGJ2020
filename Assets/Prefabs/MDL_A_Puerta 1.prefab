@@ -309,7 +309,8 @@ AudioSource:
   m_GameObject: {fileID: 3753264693853242848}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3573455028899939952, guid: 69a9a32228eee4610b8e4573af0d23a7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -554,16 +555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,6 +624,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
@@ -756,16 +757,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,6 +827,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
 --- !u!1 &6708505985677171514 stripped
@@ -857,16 +858,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -936,6 +927,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
