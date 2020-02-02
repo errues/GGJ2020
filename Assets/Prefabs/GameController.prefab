@@ -492,22 +492,25 @@ MonoBehaviour:
   deathPhrases:
   - cause: 0
     phrases:
-    - "Qu\xE9 hambre!"
+    - '...Cause you forgot to eat, and spoiler if you dont eat, you die.'
   - cause: 1
     phrases:
-    - "Qu\xE9 cansancio!"
+    - '...Cause youre little heart couldnt handle all of that, sleep is a pretty usefull
+      thing to do.'
   - cause: 2
     phrases:
-    - Pato gigante!
+    - '...Cause a big duck had entered to your bunker, he was so big... For real,
+      so big. '
   - cause: 3
     phrases:
-    - "Explosi\xF3n!"
+    - '...Cause the boiler was on fire, and, well, it explote.'
   - cause: 4
     phrases:
-    - Humo!
+    - '...Cause your machine to clean the air stop working, so you had no air. Btw
+      without oxigen you die.'
   - cause: 5
     phrases:
-    - Enhorabuena!
+    - OH no wait didn't you just win? holly shit good job
 --- !u!1 &1773226523700079140
 GameObject:
   m_ObjectHideFlags: 0
