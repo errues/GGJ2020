@@ -171,20 +171,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIndicator: {fileID: 7148297122779520955}
-  timeToStart: 0
+  timeToStart: 5
   criticalSpeeds:
   - time: 60
+    criticalSpeed: {x: 0.005, y: 0.01}
+  - time: 180
     criticalSpeed: {x: 0.01, y: 0.02}
-  - time: 60
-    criticalSpeed: {x: 0.01, y: 0.02}
-  - time: 60
-    criticalSpeed: {x: 0.01, y: 0.02}
+  - time: 280
+    criticalSpeed: {x: 0.02, y: 0.04}
+  - time: 500
+    criticalSpeed: {x: 0.04, y: 0.08}
   noNeedRepairState: 0.8
   criticalRepairState: 0.33
   successFix: 0.2
   indicatorSpeed: 0.8
-  indicatorPosition: 0.5
-  indicatorDetectionThreshold: 0.05
+  indicatorPosition: 0.65
+  indicatorDetectionThreshold: 0.1
 --- !u!1 &6115662105798601402
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,17 +432,17 @@ PrefabInstance:
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.055
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.288
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.043
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 7429582066280074611, guid: 9448be045e0648443aea8b19782dff8d,
         type: 3}
