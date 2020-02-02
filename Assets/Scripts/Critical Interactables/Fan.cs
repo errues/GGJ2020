@@ -37,9 +37,10 @@ public class Fan : CriticalInteractable {
 
             if (Input.GetButtonDown("Use")) {
                 if (alpha >= 1f - indicatorDetectionThreshold && alpha <= 1f + indicatorDetectionThreshold) {
+                    player.AutoRotate(true);
+                    player.Hammer();
                     currentStage++;
                     if (currentStage == fanStages.Length) {
-                        player.Hammer();
                         criticalState = Mathf.Clamp01(criticalState + successFix);
                         finishedRepair = criticalState == 1;
 
@@ -64,6 +65,14 @@ public class Fan : CriticalInteractable {
 
         if (finishedRepair && repairState != RepairState.GOOD) {
             ShowInteraction();
+        }
+    }
+
+    protected override void ApplyCriticalState() {
+        if (repairState != RepairState.GOOD) {
+            anim.SetBool("broken", true);
+        } else {
+            anim.SetBool("broken", false);
         }
     }
 

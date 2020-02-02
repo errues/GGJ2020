@@ -25,6 +25,8 @@ public class CriticalInteractable : Interactable {
     [Range(0, 1)]
     public float criticalRepairState = 0.33f;
 
+    protected Animator anim;
+
     protected float criticalState;
     protected RepairState repairState;
 
@@ -33,15 +35,17 @@ public class CriticalInteractable : Interactable {
 
     private float initialTime;
 
+
     public bool Enabled { get; private set; }
 
     protected virtual void Awake() {
-        RestoreCriticalState();
         ChangeCriticalSpeed();
         currentCriticalSpeedIndex = 0;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private IEnumerator Start() {
+        RestoreCriticalState();
         initialTime = Time.time;
         yield return new WaitForSeconds(timeToStart);
         Enabled = true;

@@ -51,6 +51,7 @@ public class Boiler : CriticalInteractable {
 
             if (Input.GetButtonDown("Use")) {
                 if (alpha >= indicatorPosition - indicatorDetectionThreshold && alpha <= indicatorPosition + indicatorDetectionThreshold) {
+                    player.AutoRotate(true);
                     player.Hammer();
                     criticalState = Mathf.Clamp01(criticalState + successFix);
                     finishedRepair = criticalState == 1;
@@ -66,6 +67,16 @@ public class Boiler : CriticalInteractable {
 
         if (finishedRepair && repairState != RepairState.GOOD) {
             ShowInteraction();
+        }
+    }
+
+    protected override void ApplyCriticalState() {
+        if (repairState == RepairState.CRITICAL) {
+            anim.SetBool("broken", true);
+        } else if (repairState == RepairState.NEEDREPAIR) {
+            anim.SetBool("broken", true);
+        } else {
+            anim.SetBool("broken", false);
         }
     }
 
