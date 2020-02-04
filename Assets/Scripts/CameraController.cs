@@ -1,30 +1,46 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-    public Transform target;
-    public float speed;
+    public static CameraController instance;
 
-    public Vector2 minLimits;
-    public Vector2 maxLimits;
+    public float shakeDuration = 0.3f;
+    public float shakeAmplitude = 1.2f;
+    public float shakeFrequency = 2.0f;
 
-    private Vector3 offset;
+    public CinemachineVirtualCamera virtualCamera;
+
+    private float shakeElapsedTime;
+    private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
+
+    public bool Shaking { get; private set; }
 
     private void Awake() {
-        offset = transform.position - target.position;
+        instance = this;
+    }
+
+    private void Start() {
+        virtualCameraNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     private void Update() {
-        Vector3 targetPosition = Vector3.Lerp(transform.position, new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z), Time.deltaTime * speed);
-        targetPosition.x = Mathf.Clamp(targetPosition.x, minLimits.x, maxLimits.x);
-        targetPosition.y = Mathf.Clamp(targetPosition.y, minLimits.y, maxLimits.y);
+       if (Shaking) {
+            shakeElapsedTime -= Time.deltaTime;
 
-        transform.position = targetPosition;
+            if (shakeElapsedTime <= 0) {
+                Shaking = false;
+                virtualCameraNoise.m_AmplitudeGain = 0;
+                virtualCameraNoise.m_FrequencyGain = 0;
+            }
+       } 
     }
 
-    private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(new Vector3((minLimits.x + maxLimits.x) / 2, (minLimits.y + maxLimits.y) / 2, 0), new Vector3(maxLimits.x - minLimits.x, maxLimits.y - minLimits.y, 5));
+    public void Shake() {
+        Shaking = true;
+        shakeElapsedTime = shakeDuration;
+        virtualCameraNoise.m_AmplitudeGain = shakeAmplitude;
+        virtualCameraNoise.m_FrequencyGain = shakeFrequency;
     }
 }

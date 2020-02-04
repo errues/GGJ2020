@@ -14,11 +14,13 @@ public class BunkerDoor : CriticalInteractable {
     private Quaternion[] boardRotations;
     private bool finishedRepair;
 
+    private CameraController cameraController;
     private AudioSource audioSource;
 
 
     protected override void Awake() {
         base.Awake();
+        cameraController = CameraController.instance;
         audioSource = GetComponent<AudioSource>();
         boardPositions = new Vector3[3];
         boardRotations = new Quaternion[3];
@@ -101,6 +103,7 @@ public class BunkerDoor : CriticalInteractable {
 
     public void PlayDoorHit() {
         audioSource.PlayOneShot(doorHit);
+        cameraController?.Shake();
     }
 
     protected override void ShowInteraction() {

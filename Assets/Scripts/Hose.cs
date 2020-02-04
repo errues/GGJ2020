@@ -46,6 +46,14 @@ public class Hose : Interactable {
             if (ownPlayerReference.HoldingHose && Input.GetAxisRaw("Use") == 0) {
                 ownPlayerReference.HoldingHose = false;
             }
+        }
+    }
+
+    private void LateUpdate() {
+        if (ownPlayerReference != null) {
+            if (ownPlayerReference.HoldingHose && Input.GetAxisRaw("Use") == 0) {
+                ownPlayerReference.HoldingHose = false;
+            }
 
             if (ownPlayerReference.HoldingHose) {
                 distance = Vector3.Distance(transform.position, ownPlayerReference.transform.position) - distanceOffset;
