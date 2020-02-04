@@ -44,12 +44,12 @@ public class LiftEnergy : Interactable {
     }
 
     private IEnumerator WaitToNextBlackout() {
-        Vector2 time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
         if (currentTimeIndex < timesNextBlackout.Length - 1) {
             if (Time.time - initialTime > timesNextBlackout[currentTimeIndex].time) {
                 currentTimeIndex++;
             }
         }
+        Vector2 time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
 
         yield return new WaitForSeconds(Random.Range(time.x, time.y));
         PowerOff();
