@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour {
 
         Time.timeScale = 1;
         AudioListener.pause = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void FinishGame(CauseOfDeath cause) {

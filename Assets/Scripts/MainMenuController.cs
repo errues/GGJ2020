@@ -21,6 +21,9 @@ public class MainMenuController : MonoBehaviour {
 
         Time.timeScale = 1;
         AudioListener.pause = false;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void StartGame() {
