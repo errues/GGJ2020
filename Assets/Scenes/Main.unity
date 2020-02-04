@@ -280,6 +280,10 @@ PrefabInstance:
       propertyPath: hungerSpeedLimits.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1870885079, guid: 2f6a816736317354eb715526071b4c38, type: 3}
+      propertyPath: energySpeedLimits.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f6a816736317354eb715526071b4c38, type: 3}
 --- !u!4 &1163749726 stripped
@@ -442,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[2].time
-      value: 160
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
@@ -452,22 +456,62 @@ PrefabInstance:
     - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.y
-      value: 0.13
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[0].criticalSpeed.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].criticalSpeed.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalRepairState
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: noNeedRepairState
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[0].time
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].time
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370925283666562963, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timeToStart
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[2].time
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.x
-      value: 0.02
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.y
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
@@ -477,7 +521,102 @@ PrefabInstance:
     - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.y
-      value: 0.11
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalRepairState
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].time
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].time
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].criticalSpeed.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].time
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].time
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].criticalSpeed.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].time
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].time
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].criticalSpeed.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].time
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].time
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
@@ -503,6 +642,86 @@ PrefabInstance:
         type: 3}
       propertyPath: criticalSpeeds.Array.data[1].criticalSpeed.x
       value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].time
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].time
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].time
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].time
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[0].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[0].criticalSpeed.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[0].criticalSpeed.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[1].criticalSpeed.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[1].time
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[1].criticalSpeed.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[2].time
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[2].criticalSpeed.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: timesNextBlackout.Array.data[2].criticalSpeed.y
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c90fac6e9851a741aec9039bdd21ff4, type: 3}
