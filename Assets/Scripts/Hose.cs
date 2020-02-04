@@ -66,18 +66,19 @@ public class Hose : Interactable {
             if (rollingUp) {
                 alpha = (Time.time - initialTime) / rollUpTime;
                 distance = Mathf.Lerp(initialDistance, 0, rollUpCurve.Evaluate(alpha));
-                SetHoseSize();
 
                 if (alpha >= 1) {
                     rollingUp = false;
                     hoseAtOrigin = true;
                 }
+
+                SetHoseSize();
             }
         }
     }
 
     private void SetHoseSize() {
-        hose.localScale = new Vector3(distance / 1.015535f, hose.localScale.y, hose.localScale.z);
+        hose.localScale = new Vector3(distance / 1.015535f, hoseAtOrigin ? 0 : 1, hoseAtOrigin ? 0 : 1);
         tap.localPosition = new Vector3(distance, tap.localPosition.y, tap.localPosition.z);
     }
 
