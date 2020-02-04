@@ -627,6 +627,16 @@ PrefabInstance:
       propertyPath: noNeedRepairState
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: pushButtonFix
@@ -635,7 +645,7 @@ PrefabInstance:
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.x
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
@@ -660,7 +670,7 @@ PrefabInstance:
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.y
-      value: 0.08
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
@@ -681,6 +691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: criticalSpeeds.Array.data[4].time
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: noNeedRepairState
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
