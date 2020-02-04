@@ -97,7 +97,7 @@ public class LiftEnergy : Interactable {
             go.SetActive(true);
         }
         HideInteraction();
-        WaitToNextBlackout();
+        StartCoroutine(WaitToNextBlackout());
         powerAudioSource.PlayOneShot(powerOnClip);
     }
 
