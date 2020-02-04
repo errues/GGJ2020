@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: energySpeedLimits.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1996508322, guid: 2f6a816736317354eb715526071b4c38, type: 3}
+      propertyPath: holdingHoseMovementSpeed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f6a816736317354eb715526071b4c38, type: 3}
 --- !u!4 &1163749726 stripped
@@ -618,6 +622,11 @@ PrefabInstance:
       propertyPath: criticalSpeeds.Array.data[3].time
       value: 140
       objectReference: {fileID: 0}
+    - target: {fileID: 7360294702322862102, guid: 5c90fac6e9851a741aec9039bdd21ff4,
+        type: 3}
+      propertyPath: noNeedRepairState
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 627428186579707596, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: pushButtonFix
@@ -681,7 +690,7 @@ PrefabInstance:
     - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
       propertyPath: timesNextBlackout.Array.data[0].time
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4169863610184674329, guid: 5c90fac6e9851a741aec9039bdd21ff4,
         type: 3}
