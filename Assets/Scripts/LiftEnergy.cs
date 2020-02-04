@@ -44,32 +44,8 @@ public class LiftEnergy : Interactable {
     }
 
     private IEnumerator WaitToNextBlackout() {
-        Vector2 time;
-        if (currentTimeIndex == timesNextBlackout.Length) {
-            time = new Vector2(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.x, timesNextBlackout[currentTimeIndex - 1].criticalSpeed.y);
-        } else {
-            if (currentTimeIndex == 0) {
-                time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
-            } else {
-                time = new Vector2(
-                    Mathf.Lerp(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.x, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time),
-                    Mathf.Lerp(timesNextBlackout[currentTimeIndex - 1].criticalSpeed.y, timesNextBlackout[currentTimeIndex].criticalSpeed.y, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time)
-                    );
-            }
-
-            if (Time.time - initialTime > timesNextBlackout[currentTimeIndex].time) {
-                currentTimeIndex++;
-            }
-        }
-
-        if (currentTimeIndex == timesNextBlackout.Length - 1) {
-            time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
-        } else {
-            time = new Vector2(
-                Mathf.Lerp(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex + 1].criticalSpeed.x, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time),
-                Mathf.Lerp(timesNextBlackout[currentTimeIndex].criticalSpeed.y, timesNextBlackout[currentTimeIndex + 1].criticalSpeed.y, (timesNextBlackout[currentTimeIndex].time - (Time.time - initialTime)) / timesNextBlackout[currentTimeIndex].time)
-                );
-
+        Vector2 time = new Vector2(timesNextBlackout[currentTimeIndex].criticalSpeed.x, timesNextBlackout[currentTimeIndex].criticalSpeed.y);
+        if (currentTimeIndex < timesNextBlackout.Length - 1) {
             if (Time.time - initialTime > timesNextBlackout[currentTimeIndex].time) {
                 currentTimeIndex++;
             }
