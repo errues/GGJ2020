@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9159333465473651438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
     - '...cause you forgot to eat, and **SPOILER** if you don''t eat, you die.'
   - cause: 1
     phrases:
-    - '...cause your little heart couldn''t handle all of that, sleeping is a pretty
+    - '...cause your little heart couldn''t handle all of that. Sleeping is a pretty
       useful thing to do.'
   - cause: 2
     phrases:
@@ -2292,7 +2292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5030680774500973212
 RectTransform:
   m_ObjectHideFlags: 0
