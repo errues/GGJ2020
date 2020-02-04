@@ -37,7 +37,7 @@ public class Fan : CriticalInteractable {
     }
 
     protected override void InteractLoop() {
-        if (repairState != RepairState.GOOD || !finishedRepair) {
+        if ((repairState != RepairState.GOOD || !finishedRepair) && ShowingInteraction) {
 
             alpha += Time.deltaTime * fanStages[currentStage].indicatorSpeed;
 
@@ -53,7 +53,6 @@ public class Fan : CriticalInteractable {
                     minigameAudioSource.PlayOneShot(succesClip);
                     if (currentStage == fanStages.Length) {
                         criticalState = Mathf.Clamp01(criticalState + successFix);
-                        Debug.Log(criticalState);
                         finishedRepair = criticalState == 1;
                         SetCriticalState();
 
@@ -68,6 +67,7 @@ public class Fan : CriticalInteractable {
                     }
                 } else {
                     ShowInteraction();
+                    minigameAudioSource.PlayOneShot(errorClip);
                 }
             }
 
@@ -77,7 +77,7 @@ public class Fan : CriticalInteractable {
             }
         }
 
-        if (finishedRepair && repairState != RepairState.GOOD) {
+        if (!ShowingInteraction && repairState != RepairState.GOOD) {
             ShowInteraction();
         }
     }

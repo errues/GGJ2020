@@ -47,7 +47,7 @@ public class Boiler : CriticalInteractable {
                 finishedRepair = true;
             }
 
-        } else if (repairState != RepairState.GOOD || !finishedRepair) {
+        } else if ((repairState != RepairState.GOOD || !finishedRepair) && ShowingInteraction) {
 
             if (increment) {
                 alpha += Time.deltaTime * indicatorSpeed;
@@ -85,7 +85,7 @@ public class Boiler : CriticalInteractable {
             }
         }
 
-        if (finishedRepair && repairState != RepairState.GOOD) {
+        if (!ShowingInteraction && repairState == RepairState.NEEDREPAIR) {
             ShowInteraction();
         }
     }

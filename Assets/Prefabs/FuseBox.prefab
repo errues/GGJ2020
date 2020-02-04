@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIndicator: {fileID: 2496120412410700935}
+  timeToStart: 0
   timesNextBlackout:
   - time: 60
     criticalSpeed: {x: 35, y: 40}
@@ -158,8 +159,8 @@ MonoBehaviour:
   powerOffClip: {fileID: 8300000, guid: 4cea6a1d6ba34443a8469e8c30b91269, type: 3}
   powerAudioSource: {fileID: 1627403478322997106}
   minigameAudioSource: {fileID: 1892605324618064498}
-  succesClip: {fileID: 8300000, guid: 1649494909af244fe8257e9d3f2a63d7, type: 3}
-  errorClip: {fileID: 8300000, guid: 4cea6a1d6ba34443a8469e8c30b91269, type: 3}
+  succesClip: {fileID: 8300000, guid: cc738797615254a69ab83ed32615dfae, type: 3}
+  errorClip: {fileID: 8300000, guid: 5ae6a54bb2a0f4aacb11b78dc2bcdc35, type: 3}
 --- !u!82 &1627403478322997106
 AudioSource:
   m_ObjectHideFlags: 0
@@ -434,6 +435,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8530174787129529640}
     m_Modifications:
+    - target: {fileID: 6108363838799494537, guid: 76bc10f410022914ba9716a16bd29aed,
+        type: 3}
+      propertyPath: m_Name
+      value: LiftEnergyButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108363838799494537, guid: 76bc10f410022914ba9716a16bd29aed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7659185351206402478, guid: 76bc10f410022914ba9716a16bd29aed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,16 +514,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7975743
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108363838799494537, guid: 76bc10f410022914ba9716a16bd29aed,
-        type: 3}
-      propertyPath: m_Name
-      value: LiftEnergyButtons
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108363838799494537, guid: 76bc10f410022914ba9716a16bd29aed,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bc10f410022914ba9716a16bd29aed, type: 3}

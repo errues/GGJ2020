@@ -36,6 +36,8 @@ public class GameController : MonoBehaviour {
 
             AudioListener.pause = true;
             Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             canvasController.ShowFinishPanel(cause);
         }
     }

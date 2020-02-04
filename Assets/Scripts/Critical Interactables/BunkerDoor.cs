@@ -41,7 +41,7 @@ public class BunkerDoor : CriticalInteractable {
             }
         }
 
-        if (finishedRepair && repairState != RepairState.GOOD) {
+        if (!ShowingInteraction && repairState != RepairState.GOOD) {
             ShowInteraction();
         }
     }
