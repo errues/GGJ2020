@@ -14623,9 +14623,149 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
         type: 3}
+      propertyPath: criticalSpeeds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
       propertyPath: boilerHose
       value: 
       objectReference: {fileID: 2202276446940688945}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[1].time
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].time
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[2].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].time
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[3].criticalSpeed.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].time
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[4].criticalSpeed.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].time
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[5].criticalSpeed.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].time
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[6].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].time
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[7].criticalSpeed.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].time
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[8].criticalSpeed.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].time
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].criticalSpeed.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalSpeeds.Array.data[9].criticalSpeed.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: noNeedRepairState
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845308150599696934, guid: 13894a0ae6a4efd48b1cda8164c3c853,
+        type: 3}
+      propertyPath: criticalRepairState
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13894a0ae6a4efd48b1cda8164c3c853, type: 3}
 --- !u!4 &2708450667457966886 stripped

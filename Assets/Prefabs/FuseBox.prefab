@@ -142,14 +142,12 @@ MonoBehaviour:
   interactionIndicator: {fileID: 2496120412410700935}
   timeToStart: 0
   timesNextBlackout:
-  - time: 60
-    criticalSpeed: {x: 35, y: 40}
-  - time: 90
-    criticalSpeed: {x: 5, y: 15}
-  - time: 180
-    criticalSpeed: {x: 10, y: 20}
-  - time: 220
-    criticalSpeed: {x: 3, y: 10}
+  - time: 5
+    criticalSpeed: {x: 6, y: 8}
+  - time: 200
+    criticalSpeed: {x: 50, y: 70}
+  - time: 300
+    criticalSpeed: {x: 40, y: 70}
   codeLenght: 3
   elevator: {fileID: 0}
   lights:

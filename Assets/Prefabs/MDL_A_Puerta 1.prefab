@@ -283,17 +283,17 @@ MonoBehaviour:
   criticalSpeeds:
   - time: 10
     criticalSpeed: {x: 0.005, y: 0.01}
-  - time: 30
-    criticalSpeed: {x: 0.01, y: 0.02}
   - time: 50
-    criticalSpeed: {x: 0.01, y: 0.04}
+    criticalSpeed: {x: 0.005, y: 0.02}
   - time: 100
-    criticalSpeed: {x: 0.03, y: 0.06}
+    criticalSpeed: {x: 0.01, y: 0.03}
   - time: 200
-    criticalSpeed: {x: 0.08, y: 0.12}
-  noNeedRepairState: 0.8
+    criticalSpeed: {x: 0.02, y: 0.05}
+  - time: 300
+    criticalSpeed: {x: 0.02, y: 0.07}
+  noNeedRepairState: 0.9
   criticalRepairState: 0.4
-  pushButtonFix: 0.1
+  pushButtonFix: 0.05
   boards:
   - {fileID: 2187705809843540629}
   - {fileID: 6082613090062223551}
@@ -555,6 +555,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -624,16 +634,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
@@ -757,6 +757,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,16 +837,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
 --- !u!1 &6708505985677171514 stripped
@@ -858,6 +858,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165823407017277427}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Name
+      value: MLD_TablaMadera
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e877397bba21be54381b984dd7e92c25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -927,16 +937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Name
-      value: MLD_TablaMadera
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e877397bba21be54381b984dd7e92c25,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e877397bba21be54381b984dd7e92c25, type: 3}
